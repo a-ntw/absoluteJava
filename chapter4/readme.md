@@ -9,7 +9,7 @@ Disp0413 | [ Date.java ]( chapter4/src/Date.java  )                     | `publi
 Disp0406 | [ Bill.java ]( chapter4/src/Bill.java )                      | `yourBill.inputTimeWorked(); yourBill.updateFee(); yourBill.outputBill();`
 Disp0415 | [ Pet.java ]( chapter4/src/Pet.java )                        | `Pet usersPet = new Pet("Jane Dow");` // Constructors normally set all instance variables,
 Proj0401 | [ PrintCodeword.java ]( chapter4/src/PrintCodeword.java )    | `public String toString() {return "" + letter + digit;}`
-Proj0402 | [ CalAge.java ]( chapter4/src/CalAge.java )                  | `CalAge birthDate = new CalAge(); birthDate.readInput();`
+Proj0402 | [ CalAge.java ]( chapter4/src/CalAge.java )                  | `public double thisDateMinus(CalAge otherDate) {`
 Proj0403 | [ Vehicle.java ]( chapter4/src/Vehicle.java )                | `private boolean okInit(int ...`
 Proj0404 | [ journal ]( chapter4/src/Journal.java )                     | `j = new Journal( ... ); j.setTitle(j.getSubmissionDetails(j.getTitle())); j.displayDetails();`
 Proj0405 | [ WordCount.java ]( chapter4/src/WordCount.java )            | `public void counterSetZero() { this.counter = 0;  }`
