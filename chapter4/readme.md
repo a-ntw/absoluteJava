@@ -20,9 +20,9 @@ Proj0409 | [ Species.java ]( chapter4/src/Species.java )                | `publi
 Proj0410 | [ Pet.java ]( chapter4/src/Pet.java )                        | `private boolean petTypeOK(String t) { if (t.equalsIgnoreCase("dog") ...`
 Proj0411 | [ Pizza.java ]( chapter4/src/Pizza.java )                    | `private boolean sizeOK(String size) { return (size.equalsIgnoreCase("Small") ...`
 Proj0412 | [ PizzaOrder.java ]( chapter4/src/PizzaOrder.java )          | `... case 2: cost += pizza2.calcCost(); case 1: cost += pizza1.calcCost(); ...`
-Proj0413 | [ BoxOfProduce.java ]( chapter4/src/BoxOfProduce.java )      | `javac -d build/classes src/*.java``cd build/classes``java main`
+Proj0413 | [ BoxOfProduce.java ]( chapter4/src/BoxOfProduce.java )      | `int pick = randomGenerator.nextInt(FILEROWS) + 1;  String random = this.fromFile(pick, "");`
 Proj0414 | [ CSVRating.java ]( chapter4/src/CSVRating.java )            | `CSVRating c = new CSVRating(),  total = new CSVRating(),  qty = new CSVRating();`
-Proj0415 | [ MostSimilar.java ]( chapter4/src/MostSimilar.java )        | `public void setCSVRating(CSVRating aCSVRating) {`
+Proj0415 | [ MostSimilar.java ]( chapter4/src/MostSimilar.java )        | `javac -d build/classes src/*.java ` `cd build/classes` `java main` `cd ../..` 
 
 [:top: Top](#top)
 
