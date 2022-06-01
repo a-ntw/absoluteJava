@@ -19,17 +19,11 @@
  * identical.
  */
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
 public class Fraction {
 
     private int num; // numerator
-    private int den; //denominator
-
-    public Fraction(int num, int den) {
-        this.num = num;
-        this.den = den;
-    }
+    private int den; // denominator
 
     public void setNumerator(int numerator) {
         this.num = numerator;
@@ -50,65 +44,66 @@ public class Fraction {
         return ((float) other.den / this.den == (float) other.num / this.num);
     }
 
-    public static String keyboardInput() {
-        System.out.println("Enter a fraction (eg 1/3):");
+    public static Fraction keyboardInput() {
         Scanner keyboard = new Scanner(System.in);
-        return keyboard.nextLine();
-    }
-
-    public static Fraction fractionToInt(String inputLine) {
-        String delimiters = "/, ";
-        StringTokenizer factory = new StringTokenizer(inputLine, delimiters);
-
-        int token, n = 1, d = 1;
-        if (factory.hasMoreTokens()) {
-            token = Integer.parseInt(factory.nextToken());
-            n = token;
-        }
-        if (factory.hasMoreTokens()) {
-            token = Integer.parseInt(factory.nextToken());
-            d = token;
-        }
-        return new Fraction(n, d);
+        Fraction obj = new Fraction();
+        
+        System.out.println("Enter the numerator:");
+        obj.setNumerator(keyboard.nextInt());
+        System.out.println("Enter the denominator:");
+        obj.setDenominator(keyboard.nextInt());
+        System.out.println("You enter fraction: " + obj);
+        
+        return obj;
     }
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         String cont;
         boolean toContinue;
+
+        System.out.println("To create a fraction");
+        Fraction obj = keyboardInput();
+
         do {
-
-            System.out.print("Object: ");
-            Fraction f = fractionToInt(keyboardInput());
-
-            System.out.print("Target: ");
-            Fraction g = fractionToInt(keyboardInput());
-
-            if (f.equals(g)) {
-                System.out.println(f + " is equal to " + g);
+            System.out.println("The target fraction:");
+            if (obj.equals(keyboardInput())) {
+                System.out.println(" is identical to " + obj);
             } else {
-                System.out.println(f + " is NOT equal to " + g);
+                System.out.println(" is NOT identical to " + obj);
             }
 
             System.out.println("To continue: 'Y'?");
             cont = keyboard.next();
             toContinue = cont.equalsIgnoreCase("Y");
         } while (toContinue);
-
     }
-
 }
+
 /* Sample dialogue
-antw@Mac-mini chapter5 % cd chapter5
-antw@Mac-mini chapter5 % javac -d build/classes src/*.java
-antw@Mac-mini chapter5 % cd build/classes
-antw@Mac-mini classes % java main
-Object: Enter a fraction (eg 1/3):
-20/60
-Target: Enter a fraction (eg 1/3):
-1/3
-20/60 is equal to 1/3
+antw@Mac-mini absoluteJava % java chapter5/chapter5/src/Fraction.java
+To create a fraction
+Enter the numerator:
+1
+Enter the denominator:
+3
+You enter fraction: 1/3
+The target fraction:
+Enter the numerator:
+20
+Enter the denominator:
+61
+You enter fraction: 20/61
+1/3 is NOT identical to 20/61
+To continue: 'Y'?
+y
+The target fraction:
+Enter the numerator:
+20
+Enter the denominator:
+60
+You enter fraction: 20/60
+1/3 is identical to 20/60
 To continue: 'Y'?
 n
-antw@Mac-mini classes % 
  */
