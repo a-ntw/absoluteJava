@@ -14,7 +14,7 @@ Proj0501 | [ BookStore.java ]( chapter5/src/BookStore.java )        | `private s
 Proj0502 | [ Fraction.java ]( chapter5/src/Fraction.java )          | `... "To continue: 'Y'?");cont = keyboard.next();toContinue = (cont.equalsIgnoreCase("Y"));`
 Proj0503 | [ Container.java ]( chapter5/src/Container.java )        | `Empty(bin); Transfer(tank, bin, 80); bin.displayQuantity();`
 Proj0504 | [ Team.java ]( chapter5/src/Team.java )                  | Deep copy constructor `public Team(Team obj) { ... competition1 = new Competition(obj.comp...` 
- | [  ](   )  | 
+Proj0505 | [ Money.java ]( chapter5/src/Money.java )                | `minus(m1, m2)` `m1.minus(m2)` `m1.isMinus(m2)`
  | [  ](   )  | 
 
 [:top: Top](#top)
