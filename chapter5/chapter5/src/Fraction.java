@@ -38,26 +38,51 @@ public class Fraction {
         return num + "/" + den;
     }
 
-    //treat the fractions reduced to lowest terms
+    public static Fraction LowestTerm(Fraction t) {
+        if (!t.fractionOk()) {
+            System.out.println("Fatal Error");
+            System.exit(0);
+        }
+        int i = 2;
+        while (i <= Math.abs(t.num)) {
+            while ((t.num % i == 0) && (t.den % i == 0)) {
+                t.num /= i;
+                t.den /= i;
+            }
+            i++;
+        }
+        return t;
+    }
+
+    public boolean fractionOk() {
+        return (this.num < this.den);
+    }
+
     public boolean equals(Fraction other) {
-        // get ratio of both sides numerators against ratio of denomrators
-        return ((float) other.den / this.den == (float) other.num / this.num);
+
+        return (this.num * other.den == other.num * this.den);
     }
 
     public static Fraction keyboardInput() {
         Scanner keyboard = new Scanner(System.in);
         Fraction obj = new Fraction();
-        
+
         System.out.println("Enter the numerator:");
         obj.setNumerator(keyboard.nextInt());
         System.out.println("Enter the denominator:");
         obj.setDenominator(keyboard.nextInt());
         System.out.println("You enter fraction: " + obj);
-        
+
         return obj;
     }
 
     public static void main(String[] args) {
+        Fraction a = new Fraction();
+        a.setNumerator(40);
+        a.setDenominator(60);
+        System.out.print(a + " = ");
+        System.out.println(LowestTerm(a));
+
         Scanner keyboard = new Scanner(System.in);
         String cont;
         boolean toContinue;
@@ -82,6 +107,7 @@ public class Fraction {
 
 /* Sample dialogue
 antw@Mac-mini absoluteJava % java chapter5/chapter5/src/Fraction.java
+40/60 = 2/3
 To create a fraction
 Enter the numerator:
 1

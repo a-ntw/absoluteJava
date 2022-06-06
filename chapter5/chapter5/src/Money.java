@@ -57,6 +57,11 @@ public class Money {
         Money r = new Money();
         r.dollars = a.dollars + b.dollars;
         r.cents = a.cents + b.cents;
+        if (r.cents >= 100 ) {
+            r.cents -= 100;
+            r.dollars += 1;
+        }
+        
         return r;
     }
 
@@ -64,11 +69,17 @@ public class Money {
         Money r = new Money();
         r.dollars = this.dollars + b.dollars;
         r.cents = this.cents + b.cents;
+        if (r.cents >= 100 ) {
+            r.cents -= 100;
+            r.dollars += 1;
+        }
+        
         return r;
     }
 
+    // static method
     public static Money minus(Money a, Money b) {
-        if (a.dollars < b.dollars) {
+        if ((a.dollars + (float)a.cents/100) < (b.dollars + (float)b.cents/100)) {
             System.out.println("Fatal Error.");
             System.exit(0);
         }
@@ -78,14 +89,25 @@ public class Money {
         return r;
     }
 
+    // calling obj method
     public Money minus(Money b) {
+        if ((this.dollars + (float)this.cents/100) < (b.dollars + (float)b.cents/100)) {
+            System.out.println("Fatal Error.");
+            System.exit(0);
+        }
         Money r = new Money();
         r.dollars = this.dollars - b.dollars;
         r.cents = this.cents - b.cents;
+        if (r.cents < 0) {
+            r.dollars -= 1;
+            r.cents += 100;
+        }
+        
         return r;
     }
 
-    public void isMinus(Money b) {
+    // void method
+    public void minusThisBy(Money b) {
         this.dollars -= b.dollars;
         this.cents -= b.cents;
     }
@@ -117,7 +139,8 @@ public class Money {
     }
 
     public static void main(String[] args) {
-        Money m1 = new Money(12, 35), m2 = new Money(1);
+        Money m1 = new Money(12, 85), m2 = new Money(12);
+        m2.setCents(35);
         System.out.println("m1: " + m1 + "  m2: " + m2);
 
         System.out.println("m1 + m2: " + add(m1, m2));
@@ -125,20 +148,20 @@ public class Money {
         System.out.println("m1 + m2: " + m1.add(m2));
         System.out.println("m1 - m2: " + m1.minus(m2));
 
-        System.out.println("m1 is $12.35: " + m1.equal(new Money(12, 35)));
-        m1.isMinus(m2);
+        System.out.println("m1 is $12.85: " + m1.equal(new Money(12, 85)));
+        m1.minusThisBy(m2);
         System.out.println("m1: " + m1 + "  m2: " + m2);
     }
 }
 
 /* Sample dislogue
 run:
-m1: 12 dollars & 35 cents  m2: 1 dollars & 0 cents
-m1 + m2: 13 dollars & 35 cents
-m1 - m2: 11 dollars & 35 cents
-m1 + m2: 13 dollars & 35 cents
-m1 - m2: 11 dollars & 35 cents
-m1 is $12.35: true
-m1: 11 dollars & 35 cents  m2: 1 dollars & 0 cents
+m1: 12 dollars & 85 cents  m2: 12 dollars & 35 cents
+m1 + m2: 25 dollars & 20 cents
+m1 - m2: 0 dollars & 50 cents
+m1 + m2: 25 dollars & 20 cents
+m1 - m2: 0 dollars & 50 cents
+m1 is $12.85: true
+m1: 0 dollars & 50 cents  m2: 12 dollars & 35 cents
 BUILD SUCCESSFUL (total time: 0 seconds)
  */
