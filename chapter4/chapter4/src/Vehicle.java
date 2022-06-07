@@ -19,10 +19,10 @@
 public class Vehicle {
 
     private int tankSize;
-    private int efficiency;
+    private double efficiency;
     private int fuelInTank = 0;
 
-    public void init(int iniTankSize, int initEfficiency, int fuelInTank) {
+    public void init(int iniTankSize, double initEfficiency, int fuelInTank) {
 
         if (okInit(iniTankSize, initEfficiency, fuelInTank)) {
             this.tankSize = iniTankSize;
@@ -34,8 +34,8 @@ public class Vehicle {
         }
     }
 
-    private boolean okInit(int iniTankSize, int initEfficiency, int fuel) {
-        if ((initEfficiency > 100) || (initEfficiency < 0)) {
+    private boolean okInit(int iniTankSize, double initEfficiency, int fuel) {
+        if ((initEfficiency > 1) || (initEfficiency < 0)) {
             return false;
         } else if (fuel > iniTankSize) {
             return false;
@@ -48,19 +48,24 @@ public class Vehicle {
         System.out.println("Petrol to be fill: " + (tankSize - fuelInTank));
     }
 
-    public void driveTo() {
-        System.out.printf("The vehicle can be travel with %d fuel at %d efficiency.%n",
-                this.fuelInTank, this.efficiency);
+    public void driveTo(int rate) {
+        int distance = (int) (rate * fuelInTank * efficiency);
+
+        System.out.printf("The vehicle can be travel %d with %d fuel at %.2f "
+                + "efficiency.%n", distance, this.fuelInTank, this.efficiency);
     }
 
     public static void main(String args[]) {
 
-        Vehicle fuel = new Vehicle();
-        fuel.init(100, 100, 10);
-        fuel.addPetrol();
-        fuel.init(100, 70, 80);
-        fuel.addPetrol();
-        fuel.driveTo();
+        Vehicle veh = new Vehicle();
+        veh.init(100, 1, 10);
+        veh.addPetrol();
+        veh.init(100, 0.70, 80);
+        veh.addPetrol();
+
+        // assume rate at 15km/petrol
+        int rate = 15;
+        veh.driveTo(rate); 
     }
 }
 

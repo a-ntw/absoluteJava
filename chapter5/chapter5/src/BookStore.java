@@ -18,10 +18,6 @@
  * the quantity available corresponding to each Book ID. Write a main method to
  * test your class.
  */
-/**
- *
- * @author antw
- */
 public class BookStore {
 
     private int id;
@@ -55,7 +51,7 @@ public class BookStore {
     }
 
     public void qtyAvailableOfBook() {
-        System.out.println("Corresponding to Book ID: "  + id 
+        System.out.println("Corresponding to Book ID: " + id
                 + ", quantity available: " + (quantity - numberSold));
     }
 
@@ -81,26 +77,24 @@ public class BookStore {
                 || (cat.equals("Story"))));
     }
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
         //(id, category, author, title, publisher, sellPrice, quantity)
-        BookStore book = new BookStore(1, "Kids", "Alice Oseman", 
+        BookStore book = new BookStore(1, "Kids", "Alice Oseman",
                 "Solitaire", "HarperColins Publishers", 16.04, 10);
         book.setNoSold(2);
         BookStore.setNoOfBooksSold(book.getNumberSold());
         book.qtyAvailableOfBook();
         book.trackSalesStatus();
 
-        BookStore book2 = new BookStore(2, "Engineering", "James Clear", 
+        BookStore book2 = new BookStore(2, "Engineering", "James Clear",
                 "Atomic Habits", "Cornerstone", 26.39, 5);
-        book2.setNoSold(1); 
+        book2.setNoSold(1);
         BookStore.setNoOfBooksSold(book2.getNumberSold());
         book2.qtyAvailableOfBook();
         book2.trackSalesStatus();
-        
-        BookStore book3 = new BookStore(3, "Story", "Colleen Hoover", 
+
+        BookStore book3 = new BookStore(3, "Story", "Colleen Hoover",
                 "Verity", "Little Brown Book Group", 14.58, 30);
         book3.setNoSold(3);
         BookStore.setNoOfBooksSold(book3.getNumberSold());

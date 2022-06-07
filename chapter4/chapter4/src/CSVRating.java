@@ -35,8 +35,8 @@ import java.util.StringTokenizer;
 public class CSVRating {
 
     private static final String FILENAME
-            //= "../../src/CSVRating.txt"; // can only run on commandline
-            = "/Users/antw/2022AbsoluteJava/chapter4/chapter4/src/CSVRating.txt";
+            = "../../src/CSVRating.txt"; // can only run on commandline
+    //= "/Users/antw/AbsoluteJava/chapter4/chapter4/src/CSVRating.txt";
 
     private int rateA;
     private int rateB;
@@ -259,7 +259,7 @@ Rate A: 2, B: 1, C: 4, D: 1, E: 2
 BUILD SUCCESSFUL (total time: 0 seconds)
  */
  /*
-antw@Mac-mini 2022AbsoluteJava % cat chapter4/chapter4/src/CommaSeparated.txt
+antw@Mac-mini absoluteJava % cat chapter4/chapter4/src/CSVRating.txt
 A,B,C,D,E
 3,0,5,1,2
 1,1,4,2,1

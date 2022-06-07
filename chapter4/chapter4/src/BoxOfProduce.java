@@ -35,8 +35,8 @@ import java.util.Scanner;
 public class BoxOfProduce {
 
     private static final String FILENAME
-            //= "../../src/BoxOfProduce.txt"; // can only run on commandline
-            = "/Users/antw/2022AbsoluteJava/chapter4/chapter4/src/BoxOfProduce.txt";
+            = "../../src/BoxOfProduce.txt"; // can only run on commandline
+    //= "/Users/antw/AbsoluteJava/chapter4/chapter4/src/BoxOfProduce.txt";
     private static final int FILEROWS = 5;
 
     private String fruitA;
@@ -96,7 +96,7 @@ public class BoxOfProduce {
 
     @Override
     public String toString() {
-        return "BoxOfProduce contains 3 bundles of 1:" + fruitA
+        return "3 bundles of 1:" + fruitA
                 + ", 2:" + fruitB + ", & 3:" + fruitC + '.';
     }
 
@@ -179,6 +179,7 @@ public class BoxOfProduce {
         box.setFruitA(box.randomFruit());
         box.setFruitB(box.randomFruit());
         box.setFruitC(box.randomFruit());
+        System.out.println("BoxOfProduce ramdonly selected, which contains");
         System.out.println(box);
 
         System.out.println("May select 1, 2 or 3 to substitute \n"
@@ -194,19 +195,19 @@ public class BoxOfProduce {
 /* Sample dialogue
 antw@Mac-mini classes % cd ../..
 antw@Mac-mini chapter4 % javac -d build/classes src/*.java
-antw@Mac-mini chapter4 % cd build/classes                 
-antw@Mac-mini classes % java main                        
-BoxOfProduce contains 3 bundles of 1:Kale, 2:Kale, & 3:Tomatillo.
+antw@Mac-mini chapter4 % cd build/classes
+antw@Mac-mini classes % java BoxOfProduce
+BoxOfProduce ramdonly selected, which contains
+3 bundles of 1:Broccoli, 2:Broccoli, & 3:Tomatillo.
 May select 1, 2 or 3 to substitute 
 	any one of the five possible fruits or vegetables.
 1
 Input fruit name:
 KIWI
-BoxOfProduce contains 3 bundles of 1:KIWI, 2:Kale, & 3:Tomatillo.
-antw@Mac-mini classes % 
+3 bundles of 1:KIWI, 2:Broccoli, & 3:Tomatillo.
  */
  /*
-antw@Mac-mini 2022AbsoluteJava % cat chapter4/chapter4/src/BoxOfProduce.txt
+antw@Mac-mini absoluteJava % cat chapter4/chapter4/src/BoxOfProduce.txt
 Broccoli
 Tomato
 Kiwi
