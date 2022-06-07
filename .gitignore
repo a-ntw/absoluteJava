@@ -1,10 +1,7 @@
 .DS_Store
 build
-nbproject
 test
 dist
-build.xml
-manifest.mf
 
 # Compiled class file
 *.class
