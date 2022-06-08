@@ -1,7 +1,7 @@
 
 /** 220605
+ * Absolute Java
  * Chapter5 Programming Projects
- * for Team.java
  * 6.
  * Part One: Define a class for rational numbers. A rational number is a number that
  * can be represented as the quotient of two integers. For example,  1/2, 3/4, 64/2,
