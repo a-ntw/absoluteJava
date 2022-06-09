@@ -12,10 +12,13 @@ Disp0505 | [ InvocationCounter.java ]( chapter5/src/InvocationCounter.java ) | s
 Proj0501 | [ BookStore.java ]( chapter5/src/BookStore.java )        | static var | `private static int noOfBooksSold = 0;``public static void setNoOfBooksSold(int currSold) {`
 Proj0502 | [ Fraction.java ]( chapter5/src/Fraction.java )          | keyboard | `... "To continue: 'Y'?");cont = keyboard.next();toContinue = (cont.equalsIgnoreCase("Y"));`
 Proj0503 | [ Container.java ]( chapter5/src/Container.java )        | static method | `Empty(bin); Transfer(tank, bin, 80); bin.displayQuantity();`
-Proj0504 | [ Team.java ]( chapter5/src/Team.java )                  | deep copy| `public Team(Team obj) { ... competition1 = new Competition(obj.comp...` 
+Proj0504 | [ Team.java ]( chapter5/src/Team.java ) 
+           [ Competition.java ]( chapter5/src/Competition.java )    | deep copy| `public Team(Team obj) { ... competition1 = new Competition(obj.comp...` 
 Proj0505 | [ Money.java ]( chapter5/src/Money.java )                | methods | `... + minus(m1, m2));` `... + m1.minus(m2));` `m1.minusThisBy(m2); System.out.println(m1);`
 Proj0506 | [ Rational.java ]( chapter5/src/Rational.java )          | constructor | `/**  @param wholeNumber */ public Rational(int wholeNumber) {` 
-Proj0507 | [ NationalCall.java ]( chapter5/src/NationalCall.java )  | display       | `System.out.printf("%-15s %-15s %10d %10.2f %n",(srcCountryCode + " " + sourceNum),`
+Proj0507 | [ NationalCall.java ]( chapter5/src/NationalCall.java ) 
+           [ InternationalCall.java ]( chapter5/src/InternationalCall.java ) | display | `System.out.printf("%-15s %-15s %10d %10.2f %n",(srcCountryCode + " " + sourceNum),`
+Proj0508 | [ PizzaOrder.java ]( chapter5/src/PizzaOrder.java )      | get set | `public Pizza getPizza2() { if (pizza2 != null) { return pizza2;} return null; }`
 Proj | [  ](  ) |  | ``
 Proj | [  ](  ) |  | ``
 
