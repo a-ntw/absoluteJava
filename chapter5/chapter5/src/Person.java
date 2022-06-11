@@ -1,25 +1,28 @@
 
-/** 220609
- * Absolute Java
- * Chapter5 Programming Projects.
- * 9. Use `javadoc` to generate HTML documentation for the code in Display 5.19.
- * Use the `@author` and `@version` tag for the description of the entire class. Add a
- * comment for every public method or constructor using the `@param` and `@return`
- * tags when appropriate.
- */
-/** . Display 5.19. Pg 337
- * Class for a person with a name and dates for birth and death.
- * Class invariant: A Person always has a date of birth, and if the Person
- * has a date of death, then the date of death is equal to or later than the
- * date of birth.
- */
-/**
+/* 220609  Absolute Java  Chapter5 Programming Projects.  9. */
+/** Use {@code javadoc} to generate {@code HTML} documentation for the code in Display
+ * 5.19. Use the {@code @author} and {@code @version} tag for the description of
+ * the entire class. Add a comment for every public method or constructor using
+ * the {@code @param} and {@code @return} tags when appropriate.
+ * 
+ * <p>Sample code:
+ * <blockquote>{@code Person bach = new Person("Johann Sebastian Bach",
+ *      new Date("March", 21, 1685), new Date("July", 28, 1750)); } </blockquote>
  *
- * @author antw
- * @version 01;
+ * Display 5.19. Pg 337. Class for a person with a name and dates for birth and
+ * death. Class invariant: A Person always has a date of birth, and if the
+ * Person has a date of death, then the date of death is equal to or later than
+ * the date of birth.
+ *
+ * <p>The class Date was defined in Display 4.11 and many of the details are
+ * repeated in Display 5.20.
+ *
+ * @see Date.java
+ * @author antw tag for the description of the entire class?
+ * @version 01 tag for the description of the entire class?
+ * @serial Proj0509
+ * @since 1.0
  */
-// The class Date was defined in Display 4.11 and many of the details are repeated 
-// in Display 5.20.
 public class Person {
 
     private String name;
@@ -27,7 +30,7 @@ public class Person {
     private Date died; //null indicates still alive.
 
     /**
-     * Creating object for inputs the following parameters. birthDate and
+     * Create object for inputs the following parameters. birthDate and
      * deathDate are the consistent date of birth and death.
      *
      * @param initialName Name of the object Person
@@ -51,6 +54,7 @@ public class Person {
 
     /**
      * Copy constructor for object Person.
+     * <blockquote>{@code Person bachTwin = new Person(bach); }<blockquote>
      *
      * @param original a Person object to copy from
      */
@@ -96,7 +100,7 @@ public class Person {
     /**
      * Use on System Print to print of the calling object.
      *
-     * @return String of name, born date and died date
+     * @return Return String of name, born date and died date
      */
     public String toString() {
         String diedString;
@@ -144,6 +148,8 @@ public class Person {
     }
 
     /**
+     * Set new Date to the calling object.
+     *
      * Precondition: newDate is a consistent date of birth.
      *
      * Postcondition: Date of birth of the calling object is newDate.
@@ -239,7 +245,7 @@ public class Person {
     /**
      * call the name of the calling object.
      *
-     * @return the name
+     * @return Return name
      */
     public String getName() {
         return name;
@@ -248,7 +254,7 @@ public class Person {
     /**
      * call the birth date of the calling object.
      *
-     * @return the date of born date
+     * @return Return date
      */
     public Date getBirthDate() {
         return new Date(born);
@@ -257,7 +263,7 @@ public class Person {
     /**
      * call the death date of the calling object.
      *
-     * @return the date of died date
+     * @return Return date
      */
     public Date getDeathDate() {
         if (died == null) {
@@ -283,6 +289,11 @@ public class Person {
         }
     }
 
+    /**
+     * main
+     *
+     * @param args
+     */
     public static void main(String[] args) {
 
         Person bach
@@ -325,20 +336,19 @@ Distinct copies.
 Same data.
 BUILD SUCCESSFUL (total time: 0 seconds)
  */
-/* creating Javadoc
-antw@Mac-mini src % ls PersonJavaDoc    
-Person.html		overview-tree.html
-allclasses-index.html	package-search-index.js
-allpackages-index.html	package-summary.html
-element-list		package-tree.html
-help-doc.html		resources
-index-all.html		script-dir
-index.html		script.js
-jquery-ui.overrides.css	search.js
-legal			stylesheet.css
-member-search-index.js	tag-search-index.js
-module-search-index.js	type-search-index.js
-antw@Mac-mini src % pwd
-/Users/antw/absoluteJ/chapter5/chapter5/src
-antw@Mac-mini src % 
-*/
+
+ /* creating Javadoc
+antw@Mac-mini Desktop % javadoc -d chapter5Doc /Users/antw/absoluteJ/chapter5/chapter5/src/*.*
+antw@Mac-mini Desktop % ls chapter5Doc
+BookStore.html		Pizza.html		element-list		package-search-index.js
+Competition.html	PizzaOrder.html		help-doc.html		package-summary.html
+Container.html		Rational.html		index-all.html		package-tree.html
+Date.html		RoundStuff.html		index.html		resources
+Fraction.html		Team.html		jquery-ui.overrides.css	script-dir
+InternationalCall.html	Temperature.html	legal			script.js
+InvocationCounter.html	TurnTaker.html		main.html		search.js
+Money.html		allclasses-index.html	member-search-index.js	stylesheet.css
+NationalCall.html	allpackages-index.html	module-search-index.js	tag-search-index.js
+Person.html		constant-values.html	overview-tree.html	type-search-index.js
+antw@Mac-mini Desktop % 
+ */

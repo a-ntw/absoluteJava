@@ -1,36 +1,35 @@
 
-/** 220510
- * for Person.java
- */
-/** 220408
- * Absolute Java
- * Chapter4
- * 8. Redefine the class Date in Display 4.13 so that the instance variable for
- * the month is of type int instead of type String. None of the method headings
- * should change in any way. In particular, no String type parameters should
- * change to int type parameters. You must redefine the methods to make things
- * work out. Any program that uses the Date class from Display 4.13 should be
- * able to use your Date class without any changes in the program. In
- * particular, the program in Display 4.14 should work the same whether the Date
- * class is defined as in Display 4.13 or is defined as you do it for this
- * project. Write a test program (or programs) that tests each method in your
- * class definition.
- *
- * Display 4.13  A Class with Constructors
- * 4.1 Class definitions
- *      The this Parameter
- *      Methods that Return a Boolean value
- *      The Methods equals and toString
- * 4.2 Information Hiding and Encapsulation
- *      Accessor and Mutator Methods
- * 4.3 Overloading
- * 4.4 Constructors
- */
+/* 220510  Absolute Java  Chapter5 Programming Projects  9. 
+ * 220408  Absolute Java  Chpater4 Programming Projects  8. */
 import java.util.Scanner;
 
 /**
+ * Redefine the class {@code Date} in Display 4.13 so that the instance variable
+ * for the month is of type {@code int} instead of type {@code String}. None of
+ * the method headings should change in any way. In particular, no
+ * {@code String} type parameters should change to {@code int} type parameters.
+ * You must redefine the methods to make things work out. Any program that uses
+ * the {@code Date} class from Display 4.13 should be able to use your
+ * {@code Date} class without any changes in the program. In particular, the
+ * program in Display 4.14 should work the same whether the {@code Date} class
+ * is defined as in Display 4.13 or is defined as you do it for this project.
+ * Write a test program (or programs) that tests each method in your class
+ * definition.
+ * 
+ * <p>Reference from chapter4:
+ * <ul>
+ * <li>Display 4.13 A Class with Constructors
+ * <li>4.1 Class definitions
+ * <ul><li>The this Parameter
+ * <li> Methods that Return a Boolean value
+ * <li> The Methods equals and toString </ul>
+ * <li> 4.2 Information Hiding and Encapsulation
+ * <ul><li> Accessor and Mutator Methods</ul>
+ * <li>4.3 Overloading
+ * <li>4.4 Constructors </ul>
  *
  * @author antw
+ * @see Person.java
  */
 public class Date {
 
@@ -309,7 +308,7 @@ public class Date {
     /**
      * String for print of the calling object
      *
-     * @return month on String, day and year
+     * @return Return month on String, day and year
      */
     public String toString() {
         return (monthString(month) + " " + day + ", " + year);
@@ -384,21 +383,27 @@ public class Date {
 
     // Accessor Method
     /**
-     * @return day of the calling object
+     * Get day of the calling object
+     *
+     * @return Return day
      */
     public int getDay() {
         return day;
     }
 
     /**
-     * @return year of the calling object
+     * Get year of the calling object.
+     *
+     * @return Return year
      */
     public int getYear() {
         return year;
     }
 
     /**
-     * @return month of the calling object
+     * Get month of the calling object.
+     *
+     * @return Return month
      */
     public int getMonth() {
         return month;
