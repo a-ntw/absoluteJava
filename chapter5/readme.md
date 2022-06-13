@@ -20,6 +20,7 @@ Proj0507 | [ NationalCall.java ]( chapter5/src/NationalCall.java )
            [ InternationalCall.java ]( chapter5/src/InternationalCall.java ) | display | `System.out.printf("%-15s %-15s %10d %10.2f %n",(srcCountryCode + " " + sourceNum),`
 Proj0508 | [ PizzaOrder.java ]( chapter5/src/PizzaOrder.java )      | get set | `public Pizza getPizza2() { if (pizza2 != null) { return pizza2;} return null; }`
 Proj0509 | [ Person.java ]( chapter5/src/Person.java )              | debug | in Date.java `February` was `Febuary`
+Proj0510 | [ BoxOfProduce ]( chapter5/src/BoxOfProduce )            | toString | `public String toString() { ... if (flyerInclude()) { box = box + "and salsa ... return box;`
 Proj | [  ](  ) |  | ``
 
 [:top: Top](#top)
