@@ -38,7 +38,17 @@ public class main {
 }
 
 /* Sample dialogue
-run:
+antw@Mac-mini chapter5 % pwd
+/Users/antw/absoluteJ/chapter5/chapter5
+antw@Mac-mini chapter5 % 
+antw@Mac-mini chapter5 % javaC -d build/classes src/Finance/Money.java
+antw@Mac-mini chapter5 % javaC -d build/classes src/MyMath/Rational.java
+antw@Mac-mini chapter5 % java -cp build/classes src/Proj0511/main.java
+<<< package Finance.Money >>>
+...
+antw@Mac-mini chapter5 % javaC -d build/classes -cp build/classes src/Proj0511/main.java
+antw@Mac-mini chapter5 % cd build/classes
+antw@Mac-mini classes % java Proj0511/main
 <<< package Finance.Money >>>
 m1: 12 dollars & 85 cents  m2: 12 dollars & 35 cents
 m1 + m2: 25 dollars & 20 cents
@@ -47,5 +57,8 @@ m1: 12 dollars & 85 cents  m2: 12 dollars & 35 cents
 <<< package MyMath.Rational >>>
 n1: -64/2  n2: 1/2 n4: -1/2  n5: 3/4
 divide(n4, n5)   : -2/3
-BUILD SUCCESSFUL (total time: 0 seconds)
+antw@Mac-mini classes % cd ../..
+antw@Mac-mini chapter5 % pwd
+/Users/antw/absoluteJ/chapter5/chapter5
+antw@Mac-mini chapter5 % 
 */
