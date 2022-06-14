@@ -14,14 +14,14 @@ Proj0502 | [ Fraction.java ]( chapter5/src/Fraction.java )          | keyboard |
 Proj0503 | [ Container.java ]( chapter5/src/Container.java )        | static method | `Empty(bin); Transfer(tank, bin, 80); bin.displayQuantity();`
 Proj0504 | [ Team.java ]( chapter5/src/Team.java ) 
            [ Competition.java ]( chapter5/src/Competition.java )    | deep copy| `public Team(Team obj) { ... competition1 = new Competition(obj.comp...` 
-Proj0505 | [ Money.java ]( chapter5/src/Money.java )                | methods | `... + minus(m1, m2));` `... + m1.minus(m2));` `m1.minusThisBy(m2); System.out.println(m1);`
-Proj0506 | [ Rational.java ]( chapter5/src/Rational.java )          | constructor | `/**  @param wholeNumber */ public Rational(int wholeNumber) {` 
+Proj0505 | [ Money.java ]( chapter5/src/Finance/Money.java )        | methods | `... + minus(m1, m2));` `... + m1.minus(m2));` `m1.minusThisBy(m2); System.out.println(m1);`
+Proj0506 | [ Rational.java ]( chapter5/src/MyMath/Rational.java )   | constructor | `/**  @param wholeNumber */ public Rational(int wholeNumber) {` 
 Proj0507 | [ NationalCall.java ]( chapter5/src/NationalCall.java ) 
            [ InternationalCall.java ]( chapter5/src/InternationalCall.java ) | display | `System.out.printf("%-15s %-15s %10d %10.2f %n",(srcCountryCode + " " + sourceNum),`
 Proj0508 | [ PizzaOrder.java ]( chapter5/src/PizzaOrder.java )      | get set | `public Pizza getPizza2() { if (pizza2 != null) { return pizza2;} return null; }`
 Proj0509 | [ Person.java ]( chapter5/src/Person.java )              | debug | in Date.java `February` was `Febuary`
 Proj0510 | [ BoxOfProduce ]( chapter5/src/BoxOfProduce )            | toString | `public String toString() { ... if (flyerInclude()) { box = box + "and salsa ... return box;`
-Proj | [  ](  ) |  | ``
+Proj0511 | [ Proj0511 ]( chapter5/src/Proj0511/main.java )          | package | `package Proj0511; import Finance.Money; import MyMath.Rational;`
 
 [:top: Top](#top)
 
