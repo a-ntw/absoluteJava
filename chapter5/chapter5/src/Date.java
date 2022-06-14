@@ -1,32 +1,35 @@
-/** 220408
- * Absolute Java
- * Chapter4
- * 8. Redefine the class Date in Display 4.13 so that the instance variable for 
- * the month is of type int instead of type String. None of the method headings 
- * should change in any way. In particular, no String type parameters should 
- * change to int type parameters. You must redefine the methods to make things 
- * work out. Any program that uses the Date class from Display 4.13 should be 
- * able to use your Date class without any changes in the program. In 
- * particular, the program in Display 4.14 should work the same whether the Date 
- * class is defined as in Display 4.13 or is defined as you do it for this 
- * project. Write a test program (or programs) that tests each method in your 
- * class definition.
- * 
- * Display 4.13  A Class with Constructors
- * 4.1 Class definitions
- *      The this Parameter
- *      Methods that Return a Boolean value
- *      The Methods equals and toString
- * 4.2 Information Hiding and Encapsulation
- *      Accessor and Mutator Methods
- * 4.3 Overloading
- * 4.4 Constructors
- */
+
+/* 220510  Absolute Java  Chapter5 Programming Projects  9. 
+ * 220408  Absolute Java  Chpater4 Programming Projects  8. */
 import java.util.Scanner;
 
 /**
+ * Redefine the class {@code Date} in Display 4.13 so that the instance variable
+ * for the month is of type {@code int} instead of type {@code String}. None of
+ * the method headings should change in any way. In particular, no
+ * {@code String} type parameters should change to {@code int} type parameters.
+ * You must redefine the methods to make things work out. Any program that uses
+ * the {@code Date} class from Display 4.13 should be able to use your
+ * {@code Date} class without any changes in the program. In particular, the
+ * program in Display 4.14 should work the same whether the {@code Date} class
+ * is defined as in Display 4.13 or is defined as you do it for this project.
+ * Write a test program (or programs) that tests each method in your class
+ * definition.
+ * 
+ * <p>Reference from chapter4:
+ * <ul>
+ * <li>Display 4.13 A Class with Constructors
+ * <li>4.1 Class definitions
+ * <ul><li>The this Parameter
+ * <li> Methods that Return a Boolean value
+ * <li> The Methods equals and toString </ul>
+ * <li> 4.2 Information Hiding and Encapsulation
+ * <ul><li> Accessor and Mutator Methods</ul>
+ * <li>4.3 Overloading
+ * <li>4.4 Constructors </ul>
  *
  * @author antw
+ * @see Person.java
  */
 public class Date {
 
@@ -37,24 +40,51 @@ public class Date {
 
     // from the Date.java Display 4.13
     // Constructors with different signatures
+    /**
+     * Constructor to initiate date object with Date January , 1, 1000
+     */
     public Date() {
         month = 1; //Proj0408
         day = 1;
         year = 1000;
     }
 
+    /**
+     * Constructor to create new object with parameters.
+     *
+     * @param monthInt a number between 1 to 12
+     * @param day a number between 1 to 12
+     * @param year a four digit number.
+     */
     public Date(int monthInt, int day, int year) {
         setDate(monthInt, day, year);
     }
 
+    /**
+     * Constructor to create new object with parameters.
+     *
+     * @param monthString String, name of the month
+     * @param day a number between 1 to 12
+     * @param year a four digit number.
+     */
     public Date(String monthString, int day, int year) {
         setDate(monthString, day, year);
     }
 
+    /**
+     * Create new object Date with day = 1, month = 1, with parameter year
+     *
+     * @param year a four digit number.
+     */
     public Date(int year) {
         setDate(1, 1, year);
     }
 
+    /**
+     * Constructor, copy from another Date object
+     *
+     * @param aDate object to be duplicate from
+     */
     public Date(Date aDate) {
         if (aDate == null) // Not a real date.
         {
@@ -66,13 +96,20 @@ public class Date {
         day = aDate.day;
         year = aDate.year;
     }
-    
+
     // the following from DateThirdTry.java, Display 4.4
     // from DateSixthTry.java Display 4.11
     // Overloading Mutator method, with different signatures
+    /**
+     * Set calling object with following parameters.
+     *
+     * @param month number from 1 to 12
+     * @param day day from 1 to 31 depend on which month
+     * @param year a 4 digit number
+     */
     public void setDate(int month, int day, int year) {
         if (dateOK(month, day, year)) {
-            this.month =  month; //Proj0408
+            this.month = month; //Proj0408
             this.day = day;
             this.year = year;
         } else {
@@ -81,7 +118,16 @@ public class Date {
         }
     }
 
+    /**
+     * Set calling object with following parameters.
+     *
+     * @param monthString name of the month
+     * @param day day from 1 to 31 depend on which month
+     * @param year a 4 digit number
+     */
     public void setDate(String monthString, int day, int year) {
+        // The method dateOK checks that the date is a legitimate date, such as
+        // not having more than 31 days.
         if (dateOK(monthString, day, year)) {
             this.month = monthInt(monthString); //Proj0408
             this.day = day;
@@ -92,6 +138,11 @@ public class Date {
         }
     }
 
+    /**
+     * Set calling object Date with day = 1, month = 1, with parameter year
+     *
+     * @param year a 4 digit number
+     */
     public void setDate(int year) {
         setDate(1, 1, year);
     }
@@ -104,7 +155,6 @@ public class Date {
     }
 
     private boolean dateOK(int monthInt, int dayInt, int yearInt) {
-
         //assert((yearInt < 1000) || (yearInt > 999) );
         // Self-test exercise 19.
         if ((yearInt < 1000) || (yearInt > 9999)) {
@@ -112,20 +162,29 @@ public class Date {
         }
 
         switch (monthInt) {
-            case 1, 3, 5, 7, 8, 10, 12 -> {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12: {
                 return (dayInt >= 1) && (dayInt <= 31);
             }
-            case 2 -> {
+            case 2: {
                 if (leapYear(yearInt)) {
                     return (dayInt >= 1) && (dayInt <= 29);
                 } else {
                     return (dayInt >= 1) && (dayInt <= 28);
                 }
             }
-            case 4, 6, 9, 11 -> {
+            case 4:
+            case 6:
+            case 9:
+            case 11: {
                 return (dayInt >= 1) && (dayInt <= 30);
             }
-            default -> {
+            default: {
                 return false;
             }
         }
@@ -139,14 +198,17 @@ public class Date {
 
     private boolean monthOK(String month) {
         return (month.equalsIgnoreCase("January") || month.equalsIgnoreCase("February")
-            || month.equalsIgnoreCase("March") || month.equalsIgnoreCase("April")
-            || month.equalsIgnoreCase("May") || month.equalsIgnoreCase("June")
-            || month.equalsIgnoreCase("July") || month.equalsIgnoreCase("August")
-            || month.equalsIgnoreCase("September") || month.equalsIgnoreCase("October")
-            || month.equalsIgnoreCase("November") || month.equalsIgnoreCase("December"));
+                || month.equalsIgnoreCase("March") || month.equalsIgnoreCase("April")
+                || month.equalsIgnoreCase("May") || month.equalsIgnoreCase("June")
+                || month.equalsIgnoreCase("July") || month.equalsIgnoreCase("August")
+                || month.equalsIgnoreCase("September") || month.equalsIgnoreCase("October")
+                || month.equalsIgnoreCase("November") || month.equalsIgnoreCase("December"));
     }
-    
+
     // a void method
+    /**
+     * Console input of calling object Date. Scanner input of data
+     */
     public void readInput() {
         boolean tryAgain = true;
         Scanner keyboard = new Scanner(System.in);
@@ -167,6 +229,11 @@ public class Date {
 
     // from DateFifthTry Display 4.9
     // mutator method
+    /**
+     * Set month for the calling object
+     *
+     * @param monthNumber a number from 1 to 12
+     */
     public void setMonth(int monthNumber) {
         if ((monthNumber <= 0) || (monthNumber > 12)) {
             System.out.println("Fatal Error");
@@ -176,6 +243,11 @@ public class Date {
         }
     }
 
+    /**
+     * Set day of the calling object
+     *
+     * @param day a number from 1 to 31
+     */
     public void setDay(int day) {
         if ((day <= 0) || (day > 31)) {
             System.out.println("Fatal Error");
@@ -185,6 +257,11 @@ public class Date {
         }
     }
 
+    /**
+     * Set the year of the calling object
+     *
+     * @param year a 4 digits number
+     */
     public void setYear(int year) {
         if ((year < 1000) || (year > 9999)) {
             System.out.println("Fatal Error");
@@ -197,24 +274,42 @@ public class Date {
     // The following from DateFourthTry.java Display 4.7
     // Methods equals that return a boolean value
     // can directly access private isntance variables
+    /**
+     * Tests for equality of two objects of type Date. To be equal, the two
+     * objects must have the same month, same day, and same year.
+     *
+     * @param otherDate The Date being compared to the calling object.
+     * @return Returns true if the calling object equals otherDate.
+     */
     public boolean equals(Date otherDate) {
         if (otherDate == null) {
             return false;
         }
-        return (( month == otherDate.month)  //Proj0408
+        return ((month == otherDate.month) //Proj0408
                 && (day == otherDate.day)
                 && (year == otherDate.year));
     }
 
     // Methods that return a boolean value
+    /**
+     * Tests if calling object Date being precedes to otherDate.
+     *
+     * @param otherDate The Date being precedes to the calling object.
+     * @return Returns true if the calling object precedes otherDate.
+     */
     public boolean precedes(Date otherDate) {
         return ((year < otherDate.year)
-                || (year == otherDate.year && month < otherDate.month ) //Proj0408
+                || (year == otherDate.year && month < otherDate.month) //Proj0408
                 || (year == otherDate.year && month == otherDate.month //Proj0408
                 && day < otherDate.day));
     }
 
     // Method toString
+    /**
+     * String for print of the calling object
+     *
+     * @return Return month on String, day and year
+     */
     public String toString() {
         return (monthString(month) + " " + day + ", " + year);
     }
@@ -255,46 +350,61 @@ public class Date {
     // Proj0408
     private int monthInt(String monthString) {
         switch (monthString.toUpperCase()) {
-            case "JANUARY": return 1;
-            case "FEBRUARY": return 2; 
-            case "MARCH": return 3; 
-            case "APRIL": return 4; 
-            case "MAY": return 5; 
-            case "JUNE": return 6; 
-            case "JULY": return 7; 
-            case "AUGUST": return 8; 
-            case "SEPTEMBER": return 9; 
-            case "OCTOBER": return 10; 
-            case "NOVEMBER": return 11; 
-            case "DECEMBER": return 12; 
+            case "JANUARY":
+                return 1;
+            case "FEBRUARY":
+                return 2;
+            case "MARCH":
+                return 3;
+            case "APRIL":
+                return 4;
+            case "MAY":
+                return 5;
+            case "JUNE":
+                return 6;
+            case "JULY":
+                return 7;
+            case "AUGUST":
+                return 8;
+            case "SEPTEMBER":
+                return 9;
+            case "OCTOBER":
+                return 10;
+            case "NOVEMBER":
+                return 11;
+            case "DECEMBER":
+                return 12;
             default:
                 System.out.println("Fatal Error");
                 System.exit(0);
                 return 0; // Needed to keep the compiler happy
         }
     }
-    
-    // the following from DateSecondTry.java, Display 4.2
-    /**
-     * .
-     * Precondition: All instance variables of the calling object have values.
-     * Postcondition: The data in the calling object has been written to the
-     * screen.
-     */
-    // superfluous, since has toString
-//    public void writeOutput() {
-//        System.out.println(month + " " + day + ", " + year);
-//    }
 
     // Accessor Method
+    /**
+     * Get day of the calling object
+     *
+     * @return Return day
+     */
     public int getDay() {
         return day;
     }
 
+    /**
+     * Get year of the calling object.
+     *
+     * @return Return year
+     */
     public int getYear() {
         return year;
     }
 
+    /**
+     * Get month of the calling object.
+     *
+     * @return Return month
+     */
     public int getMonth() {
         return month;
     } //Proj0408
@@ -378,4 +488,4 @@ Enter month, day, and year.
 Do not use commas or other punctuations.
 July 4 1776
 That is the 4th day of the nomth.
-*/
+ */
