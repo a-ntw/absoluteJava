@@ -40,9 +40,9 @@ public class PartiallyFilledArray {
 
     /**
      * Note that the instance variable a is a copy of {@code original.a}. The
-     * following would not be correct: a = original.a;. This point is discussed
-     * later in this chapter in the subsection entitled “Privacy Leaks with
-     * Array Instance Variables.”
+     * following would not be correct: {@code a = original.a};. This point is
+     * discussed later in this chapter in the subsection entitled “Privacy Leaks
+     * with Array Instance Variables.”
      *
      * @param original PartiallyFilledArray array
      */
@@ -139,5 +139,43 @@ public class PartiallyFilledArray {
 
     public int getNumberOfElements() {
         return numberUsed;
+    }
+
+    /**
+     * Exec0618 Define a method named removeAll that can be added to the class {@code
+     * PartiallyFilledArray}. This method has no parameters. When invoked, the
+     * method {@code removeAll} deletes all the elements in its calling object.
+     */
+    public void removeAll() {
+        numberUsed = 0;
+    }
+
+    /**
+     * Exec0619 Define a method named {@code increaseCapacity} that can be added
+     * to the class {@code PartiallyFilledArray} in Display 6.5. The method has
+     * one {@code int} parameter named {@code newCapacity} that increases the
+     * capacity of the {@code PartiallyFilledArray} so that it can hold up to
+     * {@code newCapacity} numbers.
+     * <p>
+     * If {@code newCapacity} is less than or equal to
+     * {@code maxNumberOfElements}, then the method does nothing.
+     * <p>
+     * If {@code newCapacity} is greater than {@code maxNumberOfElements}, then
+     * {@code maxNumberElements} is set equal to {@code newCapacity} and a new
+     * array of length {@code newCapacity} is created for the array instance
+     * variable {@code a}. The old values of the array instance variable are
+     * copied to the newly created array.
+     *
+     * @param newCapacity newCapacity
+     */
+    public void increaseCapacity(int newCapacity) {
+        if (newCapacity > numberUsed) {
+            maxNumberElements = newCapacity;
+            double[] temp = new double[newCapacity];
+            for (int i = 0; i < a.length; i++) {
+                temp[i] = a[i];
+            }
+            a = temp;
+        }
     }
 }

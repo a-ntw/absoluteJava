@@ -12,7 +12,9 @@ Disp0606 | [ GolfScores.java ]( chapter6/src/GolfScores.java )              | Ar
 Exec0615 | [ GolfScoresStaticExercise.java ]( chapter6/src/GolfScoresStaticExercise.java ) | Static | `System.out.println("Enter golf scores:"); fillArray(); showDifference();`
 Disp0607 | [ UtilityClass.java ]( chapter6/src/UtilityClass.java )          | int... | `public static int max(int... arg) {`
 Disp0608 | [ Utility2.java ]( chapter6/src/Utility2.java )                  | String | `public static String censor(String sentence, String... unwanted) {`
-Disp0609 | [ ToyExample.java ]( chapter6/src/ToyExample.java ) | Date[] | ` private Date[] a; `
+Disp0609 | [ ToyExample.java ]( chapter6/src/ToyExample.java )              | Date[] | ` private Date[] a; `
+Disp0611 | [ SelectionSort.java ]( chapter6/src/main.SelectionSort )        | sort | `int indexOfNextSmallest = indexOfSmallest(index, a, numberUsed); interchange(index, indexOfNextSmallest, a);`
+Disp0613 | [ EnumDemo.java ]( chapter6/src/EnumDemo.java )                  | Enum | `WorkDay startDay = WorkDay.MONDAY;` `WorkDay[] day = WorkDay.values();` `Flavor favourite = Flavor.valueOf(answer);`
  | [ main.java ]( chapter6/src/main.java ) |  | ` `
  | [ main.java ]( chapter6/src/main.java ) |  | ` `
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
