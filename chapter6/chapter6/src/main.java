@@ -7,6 +7,16 @@
  */
 public class main {
 
+    // pg 436
+    public static void showMatrix(int[][] a) {
+        int row, column;
+        for (int[] e : a) {
+            for (int f : e)
+                System.out.print(f + " ");
+            System.out.println();
+        }
+    }
+
     /**
      * main.
      *
@@ -30,4 +40,4 @@ one testing one
 antw@Mac-mini classes % cd ../..
 antw@Mac-mini chapter6 % pwd
 /Users/antw/absoluteJ/chapter6/chapter6
-*/
+ */

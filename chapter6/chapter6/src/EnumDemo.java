@@ -28,8 +28,9 @@ public class EnumDemo {
         Scanner keyboard = new Scanner(System.in);
         double hours = 0, sum = 0;
 
-        for (int i = 0; i < day.length; i++) {
-            System.out.println("Enter hours worked for " + day[i]);
+        // exec0622
+        for (WorkDay oneDay : day) {
+            System.out.println("Enter hours worked for " + oneDay);
             hours = keyboard.nextDouble();
             sum = sum + hours;
         }

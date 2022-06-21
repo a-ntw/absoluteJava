@@ -1,5 +1,15 @@
 mynotes on didn't know about these:
 
+- [chapter 1](#chapter-1)
+- [chapter 2](#chapter-2)
+- [chapter 3](#chapter-3)
+- [chapter 4](#chapter-4)
+- [chapter 5](#chapter-5)
+- [chapter 6](#chapter-6)
+
+[top]: topOfThePage
+
+---
 ### chapter 1 ###
 
 pg 35
@@ -37,6 +47,7 @@ have to include an extra invocation of nextLine to get rid of the end of a line
 (to get rid of a `\n`). 
 
 
+[:top: Top](#top)
 ### chapter 3 ###
 
 pg 147
@@ -106,6 +117,8 @@ Assertion Checking
 
 `java -enableassertions YourProgram`
 
+
+[:top: Top](#top)
 ### chapter 4 ###
 
 pg 214
@@ -254,6 +267,8 @@ This will produce the following output:
     critical.
 ```
 
+
+[:top: Top](#top)
 ### chapter 5 ###
 
 pg 295
@@ -406,11 +421,13 @@ Generating doc/BinaryGap.html...
 ...
 ```
 
+
+[:top: Top](#top)
 ### chapter 6 ###
 
 Declaring and Creating an Array
 
-```
+``` java
  char[] line = new char[80];
  double[] reading = new double[300];
  Person[] specimen = new Person[100];
@@ -431,7 +448,7 @@ pg 385
 pg 187
 
 The class `String` has a constructor that has a single parameter of type `char[]`.
-```
+``` java
         char[] a = {'A', ' ', 'B', 'i', 'g', ' ', 'H', 'i', '!'};
         String s = new String(a); // Can obtain the String value
         System.out.println(a);     // A Big Hi!
@@ -442,7 +459,7 @@ The class `String` has a constructor that has a single parameter of type `char[]
 pg 390
 
 Arrays with a Class Base Type
-```
+``` java
     Date[] holidayList = new Date[20];
     for (int i = 0; i < holidayList.length; i++)
         holidayList[i] = new Date( );
@@ -452,7 +469,7 @@ pg 392
 
 Array types are reference types; that is, an array variable contains the memory 
 address of the array it names. The assignment operator copies this memory address.
-```
+``` java
     double[] a = new double[10], b = new double[10];
     for (int i = 0; i < a.length; i++) 
         a[i] = i;
@@ -468,7 +485,7 @@ in the computer’s memory.
 pg 395
 
 the array parameter specifies the base type of the array but not the length of the array.
-```
+``` java
  char[] c = new char[10]; int[] a = new int[10]; int[] b = new int[20];
 // ...
 
@@ -478,7 +495,7 @@ the array parameter specifies the base type of the array but not the length of t
 pg 398
 
 The Method main Has an Array Parameter
-```
+``` java
     public static void main(String[] args) {
 ```
 The identifier args is a parameter for an array of base type `String`.
@@ -488,12 +505,12 @@ pg 411
 For-Each Loop for Arrays
 
 SYNTAX
-```
+``` java
     for (Array_Base_Type Variable : Array_Name)
         Statement
 ```
 EXAMPLES
-```
+``` java
  for (double element : a)
      sum += element;
 ```
@@ -515,12 +532,12 @@ in which case the vararg specification must be the last item on the parameter li
 pg 416
 
 Privacy Leaks with Array Instance Variables
-```
+``` java
 public double[] getInsideArray( ) // Problematic version {
     return a; }
 ```
 A safe definition of getInsideArray is the following:
-```
+``` java
 public double[] getInsideArray( ) { // Good version 
     //Recall that maxNumberElements == a.length.
     double[] temp = new double[maxNumberElements];
@@ -557,3 +574,18 @@ Example
 * `WorkDay[] day = WorkDay.values();` ... `day[i]`
 * `WorkDay.valueOf("THURSDAY")` returns `WorkDay.THURSDAY`.
 
+pg 431
+
+Multidimensional Array Basic
+```
+    char[][] page = new char[30][100];
+```
+
+pg 435
+
+Ragged Arrays *
+
+
+[:top: Top](#top)
+
+---

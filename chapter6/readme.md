@@ -13,9 +13,9 @@ Exec0615 | [ GolfScoresStaticExercise.java ]( chapter6/src/GolfScoresStaticExerc
 Disp0607 | [ UtilityClass.java ]( chapter6/src/UtilityClass.java )          | int... | `public static int max(int... arg) {`
 Disp0608 | [ Utility2.java ]( chapter6/src/Utility2.java )                  | String | `public static String censor(String sentence, String... unwanted) {`
 Disp0609 | [ ToyExample.java ]( chapter6/src/ToyExample.java )              | Date[] | ` private Date[] a; `
-Disp0611 | [ SelectionSort.java ]( chapter6/src/main.SelectionSort )        | sort | `int indexOfNextSmallest = indexOfSmallest(index, a, numberUsed); interchange(index, indexOfNextSmallest, a);`
+Disp0611 | [ SelectionSort.java ]( chapter6/src/SelectionSort.java )        | sort | `int indexOfNextSmallest = indexOfSmallest(index, a, numberUsed); interchange(index, indexOfNextSmallest, a);`
 Disp0613 | [ EnumDemo.java ]( chapter6/src/EnumDemo.java )                  | Enum | `WorkDay startDay = WorkDay.MONDAY;` `WorkDay[] day = WorkDay.values();` `Flavor favourite = Flavor.valueOf(answer);`
- | [ main.java ]( chapter6/src/main.java ) |  | ` `
+Disp0618 | [ GradeBook.java ]( chapter6/src/GradeBook.java )                | Arrays | `public static void main(String[] args) { GradeBook book = new GradeBook();  book.display(); }`
  | [ main.java ]( chapter6/src/main.java ) |  | ` `
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
