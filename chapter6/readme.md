@@ -16,11 +16,9 @@ Disp0609 | [ ToyExample.java ]( chapter6/src/ToyExample.java )              | Da
 Disp0611 | [ SelectionSort.java ]( chapter6/src/SelectionSort.java )        | sort | `int indexOfNextSmallest = indexOfSmallest(index, a, numberUsed); interchange(index, indexOfNextSmallest, a);`
 Disp0613 | [ EnumDemo.java ]( chapter6/src/EnumDemo.java )                  | Enum | `WorkDay startDay = WorkDay.MONDAY;` `WorkDay[] day = WorkDay.values();` `Flavor favourite = Flavor.valueOf(answer);`
 Disp0618 | [ GradeBook.java ]( chapter6/src/GradeBook.java )                | Arrays | `public static void main(String[] args) { GradeBook book = new GradeBook();  book.display(); }`
- | [ main.java ]( chapter6/src/main.java ) |  | ` `
+Proj0601 | [ CourierAgency.java ]( chapter6/src/CourierAgency.java )        | ternary | `withinCity[i] =keyboard.nextBoolean();` `cost= Math.ceil(parcel[i])*2; cost += withinCity[i] ? 20 : 40;`
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
-<!---
-Proj0507 | [ NationalCall.java ]( chapter5/src/NationalCall.java ) [ InternationalCall.java ]( chapter5/src/InternationalCall.java ) | display | `System.out.printf("%-15s %-15s %10d %10.2f %n",(srcCountryCode + " " + sourceNum),`
 
 <!--- MacBook GMax has failed to Git push for two days, due to authentication. 
 Checked on email axxxx43525@g for details. 

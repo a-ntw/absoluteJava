@@ -49,6 +49,19 @@ have to include an extra invocation of nextLine to get rid of the end of a line
 
 [:top: Top](#top)
 ### chapter 3 ###
+pg 145
+
+The conditional operator (also called the **ternary operator** or **arithmetic if**).
+```
+    if (n1 > n2)
+        max = n1;
+    else
+        max = n2;
+```
+can be expressed 
+```
+    max = (n1 > n2) ? n1 : n2;
+```
 
 pg 147
 
