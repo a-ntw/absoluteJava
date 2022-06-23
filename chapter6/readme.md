@@ -17,6 +17,7 @@ Disp0611 | [ SelectionSort.java ]( chapter6/src/SelectionSort.java )        | so
 Disp0613 | [ EnumDemo.java ]( chapter6/src/EnumDemo.java )                  | Enum | `WorkDay startDay = WorkDay.MONDAY;` `WorkDay[] day = WorkDay.values();` `Flavor favourite = Flavor.valueOf(answer);`
 Disp0618 | [ GradeBook.java ]( chapter6/src/GradeBook.java )                | Arrays | `public static void main(String[] args) { GradeBook book = new GradeBook();  book.display(); }`
 Proj0601 | [ CourierAgency.java ]( chapter6/src/CourierAgency.java )        | ternary | `withinCity[i] =keyboard.nextBoolean();` `cost= Math.ceil(parcel[i])*2; cost += withinCity[i] ? 20 : 40;`
+Proj0602 | [ MemoryGame.java ]( chapter6/src/MemoryGame.java ) |  | ` `
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 

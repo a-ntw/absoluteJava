@@ -437,6 +437,9 @@ Generating doc/BinaryGap.html...
 
 [:top: Top](#top)
 ### chapter 6 ###
+pg 382
+
+In Java, an array is considered to be an object, ...
 
 Declaring and Creating an Array
 
