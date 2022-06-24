@@ -6,7 +6,7 @@ ref | fileName | type | shown
 --- | --- | --- | ---:
 Disp0502 | [ RoundStuff.java ]( chapter5/src/RoundStuff.java )      | static methods | `System.out.println("has an area of " + RoundStuff.area(radius) + " square inches.");`
 Disp0503 | [ Temperature.java ]( chapter5/src/Temperature.java )    | static methods | `public static void main(String[] args) { ...  degreesC = toCelsius(degreesF);`
-Disp0504 | [ TurnTaker.java ]( chapter5/src/TurnTaker )             | static var | `private static int turn = 0;`
+Disp0504 | [ TurnTaker.java ]( chapter5/src/TurnTaker.java )        | static var | `private static int turn = 0;`
 Disp0505 | [ InvocationCounter.java ]( chapter5/src/InvocationCounter.java ) | static var | `private static int numberOfInvocations = 0;`
  | [  ](  ) |  | 
 Proj0501 | [ BookStore.java ]( chapter5/src/BookStore.java )        | static var | `private static int noOfBooksSold = 0;``public static void setNoOfBooksSold(int currSold) {`
