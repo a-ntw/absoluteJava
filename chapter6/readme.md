@@ -19,6 +19,7 @@ Disp0618 | [ GradeBook.java ]( chapter6/src/GradeBook.java )                | Ar
 Proj0601 | [ CourierAgency.java ]( chapter6/src/CourierAgency.java )        | ternary | `withinCity[i] =keyboard.nextBoolean();` `cost= Math.ceil(parcel[i])*2; cost += withinCity[i] ? 20 : 40;`
 Proj0602 | [ MemoryGame.java ]( chapter6/src/MemoryGame.java ) |  | ` `
 Proj0603 | [ AverageSalary.java ]( chapter6/src/AverageSalary.java )        | objects | `private int[] salary; private int[] otHours; private int[] otPay; private int[] grossSalary; private int ...`
+Proj0604 | [ ValueAddedCourse.java ]( chapter6/src/ValueAddedCourse.java )  | partially filles array | `... fillArray()... add(int newElement) ... validateMarks() ... delete(int index) ...`
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 
