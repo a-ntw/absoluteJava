@@ -6,9 +6,10 @@ ref | fileName | type | shown
 --- | --- | --- | ---:
 Disp0602 | [ ArrayOfScores.java ]( chapter6/src/ArrayOfScores.java )        | Array | `double[] score = new double[5];`
 Disp0603 | [ DifferentEquals.java ]( chapter6/src/DifferentEquals.java )    | Array equal | `boolean equalArrays(int[] a, int[] b)`
+Disp0605 | [ GolfScores.java ]( chapter6/src/GolfScores.java ) |  | ` `
 Disp0605 | [ PartiallyFilledArray.java ]( chapter6/src/PartiallyFilledArray.java ) | Array constructor | `private int maxNumberElements; private double[] a; private int numberUsed;`
 Exec0609 | [ Exec0609.java ]( chapter6/src/Exec0609.java )                  | Array | ` double[] a = {1.2, 2.1, 3.3, 2.5, 4.5,7.9, 5.4, 8.7, 9.9, 1.0};`
-Disp0606 | [ GolfScores.java ]( chapter6/src/GolfScores.java )              | Array | `PartiallyFilledArray score = new PartiallyFilledArray(MAX_NUMBER_SCORES); fillArray(score); showDifference(score);`
+Disp0606 | [ GolfScoresVersion2.java ]( chapter6/src/GolfScoresVersion2.java )              | Array | `PartiallyFilledArray score = new PartiallyFilledArray(MAX_NUMBER_SCORES); fillArray(score); showDifference(score);`
 Exec0615 | [ GolfScoresStaticExercise.java ]( chapter6/src/GolfScoresStaticExercise.java ) | Static | `System.out.println("Enter golf scores:"); fillArray(); showDifference();`
 Disp0607 | [ UtilityClass.java ]( chapter6/src/UtilityClass.java )          | int... | `public static int max(int... arg) {`
 Disp0608 | [ Utility2.java ]( chapter6/src/Utility2.java )                  | String | `public static String censor(String sentence, String... unwanted) {`
@@ -19,7 +20,9 @@ Disp0618 | [ GradeBook.java ]( chapter6/src/GradeBook.java )                | Ar
 Proj0601 | [ CourierAgency.java ]( chapter6/src/CourierAgency.java )        | ternary | `withinCity[i] =keyboard.nextBoolean();` `cost= Math.ceil(parcel[i])*2; cost += withinCity[i] ? 20 : 40;`
 Proj0602 | [ MemoryGame.java ]( chapter6/src/MemoryGame.java ) |  | ` `
 Proj0603 | [ AverageSalary.java ]( chapter6/src/AverageSalary.java )        | objects | `private int[] salary; private int[] otHours; private int[] otPay; private int[] grossSalary; private int ...`
-Proj0604 | [ ValueAddedCourse.java ]( chapter6/src/ValueAddedCourse.java )  | partially filles array | `... fillArray()... add(int newElement) ... validateMarks() ... delete(int index) ...`
+Proj0604 | [ ValueAddedCourse.java ]( chapter6/src/ValueAddedCourse.java )  | partially filled array | `... fillArray()... add(int newElement) ... validateMarks() ... delete(int index) ...`
+Proj0605 | [ NumberOfOccurences.java ]( chapter6/src/NumberOfOccurences.java ) |  | `private static void selectionSort(int[] a, int numberUsed) {`
+Proj0606 | [ LargestToSmallest.java ]( chapter6/src/LargestToSmallest.java ) | keyboard | `while (keyboard.hasNextInt() && (index < num.length)) { next = keyboard.nextInt();`
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 
