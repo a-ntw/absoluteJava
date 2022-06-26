@@ -12,9 +12,6 @@ import java.util.Scanner;
  */
 public class NumberOfOccurences {
 
-    private static int numberUsed;
-    private static int[][] twoColumns;
-
     public static void main(String[] args) {
         //int[] a1 = {-22, 3, -22, 4, 1, 1, -22, 1, -1, 1, 2, 3, 4, 2, -22};
         //int[] a2 = {-1, 1, 2, 3, 4, 2, -22, -22, 3, -22, 4, 1, 1, -22, 1};
@@ -22,11 +19,13 @@ public class NumberOfOccurences {
         int[] a1, a2;
         a1 = inputArray(15);
         a2 = inputArray(15);
-        
+
         int[] m = merge(a1, a2);
+
         NumberOfOccurences c = new NumberOfOccurences();
-        c.occurrences(m);
-        c.display(getTwoColumns(), getNumberUsed());
+        int[][] tColumns = new int[m.length][2]; // cater for max size
+        int numberUsed = c.occurrences(tColumns, m);
+        c.display(tColumns, numberUsed);
     }
 
     public static int[] inputArray(int size) {
@@ -83,11 +82,19 @@ public class NumberOfOccurences {
         a[j] = temp; //original value of a[i]
     }
 
-    public void occurrences(int[] m) {
+    /**
+     * Sort the int[] array, than feed to int[][]; the first column is a list of
+     * the distinct array elements; the second column is the count of the number
+     * of occurrences of each element.
+     *
+     * @param twoColumns int[][]
+     * @param m int[] array
+     * @return Return numberUsed
+     */
+    public int occurrences(int[][] twoColumns, int[] m) {
 
         selectionSort(m, m.length);
 
-        twoColumns = new int[m.length][2];
         int x = 0;
         twoColumns[x][0] = m[0];
         twoColumns[x][1] = 1;
@@ -98,15 +105,7 @@ public class NumberOfOccurences {
             }
             twoColumns[x][1]++;
         }
-        numberUsed = x;
-    }
-
-    public static int getNumberUsed() {
-        return numberUsed;
-    }
-
-    public static int[][] getTwoColumns() {
-        return twoColumns;
+        return x; // numberUsed
     }
 
     public void display(int[][] occ, int numberUsed) {

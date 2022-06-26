@@ -6,7 +6,7 @@ ref | fileName | type | shown
 --- | --- | --- | ---:
 Disp0602 | [ ArrayOfScores.java ]( chapter6/src/ArrayOfScores.java )        | Array | `double[] score = new double[5];`
 Disp0603 | [ DifferentEquals.java ]( chapter6/src/DifferentEquals.java )    | Array equal | `boolean equalArrays(int[] a, int[] b)`
-Disp0605 | [ GolfScores.java ]( chapter6/src/GolfScores.java ) |  | ` `
+Disp0605 | [ GolfScores.java ]( chapter6/src/GolfScores.java )              | partially filled array | `double[] score = new double[MAX_NUM]; int numUsed = 0; numUsed = fillArray(score); showDifference(score, numUsed);`
 Disp0605 | [ PartiallyFilledArray.java ]( chapter6/src/PartiallyFilledArray.java ) | Array constructor | `private int maxNumberElements; private double[] a; private int numberUsed;`
 Exec0609 | [ Exec0609.java ]( chapter6/src/Exec0609.java )                  | Array | ` double[] a = {1.2, 2.1, 3.3, 2.5, 4.5,7.9, 5.4, 8.7, 9.9, 1.0};`
 Disp0606 | [ GolfScoresVersion2.java ]( chapter6/src/GolfScoresVersion2.java )              | Array | `PartiallyFilledArray score = new PartiallyFilledArray(MAX_NUMBER_SCORES); fillArray(score); showDifference(score);`
