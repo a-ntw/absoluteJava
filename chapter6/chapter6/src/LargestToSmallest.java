@@ -3,7 +3,8 @@
 import java.util.Scanner;
 
 /**
- * Write a program that reads numbers from the keyboard into an array of type null {@code int[]. You may assume that there will be 50 or fewer entries in the array.
+ * Write a program that reads numbers from the keyboard into an array of type
+ * null {@code int[]. You may assume that there will be 50 or fewer entries in the array.
  * Your program allows any number of numbers to be entered, up to 50. The output
  * is to be a two-column list. The first column is a list of the distinct array
  * elements; the second column is the count of the number of occurrences of each
@@ -13,25 +14,22 @@ import java.util.Scanner;
 public class LargestToSmallest {
 
     public static final int MAX_NUMBER_ENTRIES = 50;
-    private static int[] num = new int[MAX_NUMBER_ENTRIES];
-    private static int numberUsed = 0;
-
-    private static int twoColumnsUsed;
-    private static int[][] twoColumns;
 
     public static void main(String[] args) {
-        fillArray();
-        largeToSmallOccurrences();
-        display();
+        int[] num = new int[MAX_NUMBER_ENTRIES];
+        int numberUsed = fillArray(num);
+        int[][] twoColumns = new int[numberUsed][2];
+        int twoColumnsUsed = largeToSmallOccurrences(twoColumns, num, numberUsed);
+        display(twoColumns, twoColumnsUsed);
     }
 
-    public static void fillArray() {
+    public static int fillArray(int[] num) {
         System.out.println("Enter up to " + num.length + " int numbers,(space between)");
         System.out.println("Mark the end of the list with a NON integer.");
         Scanner keyboard = new Scanner(System.in);
 
         int next, index = 0;
-        if (!keyboard.hasNextInt()) {
+        if (!keyboard.hasNextInt()) { //                  **** .hasNextInt() ****
             System.out.println("Error, need first Int number.");
             System.exit(0);
         }
@@ -40,27 +38,23 @@ public class LargestToSmallest {
             num[index] = next;
             index++;
         }
-        numberUsed = index;
+        return index; // numberUsed
     }
 
-    public static int[][] getTwoColumns() {
-        return twoColumns;
-    }
-
-    public static void display() {
+    public static void display(int[][] twoColumns, int twoColumnsUsed) {
         System.out.printf("%3s   %s%n", "N", "Count");
         for (int i = 0; i <= twoColumnsUsed; i++) {
             System.out.printf("%3d   %-2d%n", twoColumns[i][0], twoColumns[i][1]);
         }
     }
 
-    public static void largeToSmallOccurrences() {
+    public static int largeToSmallOccurrences(
+            int[][] twoColumns, int[] num, int numberUsed) {
 
         selectionSort(num, numberUsed);
 
         int x = 0;
         int maxAindex = numberUsed - 1;
-        twoColumns = new int[numberUsed][2];
         twoColumns[x][0] = num[maxAindex];
         twoColumns[x][1] = 1;
 
@@ -71,7 +65,7 @@ public class LargestToSmallest {
             }
             twoColumns[x][1]++;
         }
-        twoColumnsUsed = x;
+        return x;// twoColumnsUsed 
     }
 
     private static void selectionSort(int[] a, int numberUsed) {
