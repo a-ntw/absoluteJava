@@ -23,7 +23,8 @@ Proj0603 | [ AverageSalary.java ]( chapter6/src/AverageSalary.java )        | ob
 Proj0604 | [ ValueAddedCourse.java ]( chapter6/src/ValueAddedCourse.java )  | partially filled array | `... fillArray()... add(int newElement) ... validateMarks() ... delete(int index) ...`
 Proj0605 | [ NumberOfOccurences.java ]( chapter6/src/NumberOfOccurences.java ) |  | `private static void selectionSort(int[] a, int numberUsed) {`
 Proj0606 | [ LargestToSmallest.java ]( chapter6/src/LargestToSmallest.java ) | keyboard | `while (keyboard.hasNextInt() && (index < num.length)) { next = keyboard.nextInt();`
-Proj0607 | [ Sum20digitIntegers.java ]( chapter6/src/Sum20digitIntegers.java ) | Array | `for (int i = 0; (i < used1) || (i < used2); i++) {` `digit = Character.digit(d.charAt(i), 10);`
+Proj0607 | [ Sum20digitIntegers.java ]( chapter6/src/Sum20digitIntegers.java ) | Array | `for (int i = 0; (i < used1) || (i < used2); i++) {` `digit = Character.digit(d.charAt(i), 10); repeat = true;`
+Proj0608 | [ BubbleSort.java ]( chapter6/src/BubbleSort.java )              | sort | `for (index = 0; index < numberUsed - 1; index++) { if (a[index] > a[index + 1]) { interchange(index, index + 1, a);}`
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 
