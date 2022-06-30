@@ -1,7 +1,9 @@
 
 /* 220618 Absolute Java  Chapter6 Programming Projects.  Exercise 6.9 */
 /**
- * Write a method named outOfOrder that takes as a parameter an array of double and returns a value of type int. This method will test the array for being out of order, meaning that the array violates the condition:
+ * Write a method named outOfOrder that takes as a parameter an array of double
+ * and returns a value of type int. This method will test the array for being 
+ * out of order, meaning that the array violates the condition:
  * <p>
  * {@code a[0] <= a[1] <= a[2] <= ...}
  * <p>
