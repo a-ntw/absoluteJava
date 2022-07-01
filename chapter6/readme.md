@@ -28,6 +28,7 @@ Proj0608 | [ BubbleSort.java ]( chapter6/src/BubbleSort.java )              | so
 Proj0609 | [ PartiallyFilledArray.java ]( chapter6/src/PartiallyFilledArray.java ) | Array | `increaseCapacity(maxNumberElements * 2);`
 Proj0610 | [ GridOfStar.java ]( chapter6/src/GridOfStar.java )              | method | `GridOfStar.start();`
 Proj0611 | [ PassengersSeats.java ]( chapter6/src/PassengersSeats.java )    | while | `innerloop: while (toContNext) { ...; if (!pickSeat(pick)) { break innerloop; } else if (...`
+Proj0612 | [ SimpleTrivia.java ]( chapter6/src/SimpleTrivia.java ) |  | ` `
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 
