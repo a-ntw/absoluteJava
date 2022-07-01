@@ -50,7 +50,7 @@ public class SimpleTrivia {
         arrPoi = temp;
     }
 
-    public static void games() {
+    public static void game() {
         Scanner keyboard = new Scanner(System.in);
         fillArray();
 
@@ -78,7 +78,7 @@ public class SimpleTrivia {
     }
 
     public static void main(String[] args) {
-        SimpleTrivia.games();
+        SimpleTrivia.game();
     }
 }
 
