@@ -33,8 +33,9 @@ import java.util.Scanner;
 public class PinAuthenticate {
 
     private static final String PIN = "12345";
-    public int[] assign = new int[10];
+    private String[] assign = new String[10]; // assign array for assignDigit
     public String keyIn;
+    private String assignDigit = "123"; // either '1','2' or '3' that assigned
 
     public static void main(String[] args) {
         PinAuthenticate a = new PinAuthenticate();
@@ -52,8 +53,10 @@ public class PinAuthenticate {
      * assign 1,2 or 3 to the assign array
      */
     public void assignRandomNum() {
+        int d;
         for (int i = 0; i < 10; i++) {
-            assign[i] = (int) (Math.random() * 3) + 1;
+            d = (int) (Math.random() * 3) + 1;
+            assign[i] = d + ""; // String
         }
     }
 
@@ -81,16 +84,12 @@ public class PinAuthenticate {
     }
 
     public boolean authenticate() {
-        int lgth = PIN.length(), pinDigit, userDigit;
-        char ch;
+        int lgth = PIN.length();
+        String pinDigit, userDigit;
 
         for (int i = 0; i < lgth; i++) {
-            ch = PIN.charAt(i);
-            pinDigit = Integer.parseInt(ch + "");
-
-            ch = keyIn.charAt(i);
-            userDigit = Integer.parseInt(ch + "");
-
+            pinDigit = PIN.substring(i, i + 1);
+            userDigit = keyIn.substring(i, i + 1);
             if (!comapareAssignIndex(pinDigit, userDigit)) {
                 return false;
             }
@@ -98,20 +97,20 @@ public class PinAuthenticate {
         return true;
     }
 
-    private boolean comapareAssignIndex(int actualPinDigit, int UserDigit) {
+    private boolean comapareAssignIndex(String actualPinDigit, String UserDigit) {
 
         // actualPin digit is position of assignNum
-        int assignedNum = assign[actualPinDigit];
+        int d = Integer.parseInt(actualPinDigit);
 
-        return assignedNum == UserDigit;
+        return assign[d].equals(UserDigit);
     }
 
     private boolean userKeyInOK() {
         if (keyIn.length() == PIN.length()) {
             for (int i = 0; i < keyIn.length(); i++) {
-                char ch = keyIn.charAt(i);
-                if (Character.isAlphabetic(ch)) {
-                    System.out.println("Password can only contain numeric");
+                String ch = keyIn.substring(i, i + 1);
+                if (!assignDigit.contains(ch)) {
+                    System.out.println("Password can only contain suitable numeric");
                     return false;
                 }
             }
