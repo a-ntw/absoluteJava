@@ -32,6 +32,7 @@ Proj0612 | [ SimpleTrivia.java ]( chapter6/src/SimpleTrivia.java ) |  | ` `
 Proj0613 | [ Trivia.java ]( chapter6/src/Trivia.java )                      | Object | `private Trivia[] arr = new Trivia[MAX_SIZE];` `private Trivia(String question, String answer, int point) {`
 Proj0614 | [ PinAuthenticate.java ]( chapter6/src/PinAuthenticate.java )    | String | `String ch = keyIn.substring(i, i + 1); if (!assignDigit.contains(ch)) {`
 Proj0615 | [ PizzaOrder.java ]( chapter6/src/PizzaOrder.java ) |  | ` `
+Proj0616 | [ BenfordsLaw.java ]( chapter6/src/BenfordsLaw.java )            | toString | `selected = Integer.toString(data).charAt(0); index = Integer.parseInt(Character.toString(selected));`
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 
