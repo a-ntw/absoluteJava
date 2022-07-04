@@ -34,6 +34,7 @@ Proj0614 | [ PinAuthenticate.java ]( chapter6/src/PinAuthenticate.java )    | St
 Proj0615 | [ PizzaOrder.java ]( chapter6/src/PizzaOrder.java ) |  | ` `
 Proj0616 | [ BenfordsLaw.java ]( chapter6/src/BenfordsLaw.java )            | toString | `selected = Integer.toString(data).charAt(0); index = Integer.parseInt(Character.toString(selected));`
 Proj0617 | [ CSVRating.java ]( chapter6/src/CSVRating.java ) | Scanner | `public CSVRating(String filename) {`
+Proj0618 | [ BoxOfProduce.java ]( chapter6/src/BoxOfProduce.java )          | while | `outerLoop: while (true) { ...  continue outerLoop;` ` public String toString() { String s = ... return s; }`
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 
