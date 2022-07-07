@@ -36,7 +36,7 @@ Proj0616 | [ BenfordsLaw.java ]( chapter6/src/BenfordsLaw.java )            | to
 Proj0617 | [ CSVRating.java ]( chapter6/src/CSVRating.java ) | Scanner | `public CSVRating(String filename) {`
 Proj0618 | [ BoxOfProduce.java ]( chapter6/src/BoxOfProduce.java )          | while | `outerLoop: while (true) { ...  continue outerLoop;` ` public String toString() { String s = ... return s; }`
 Proj0619 | [ WordGame.java ]( chapter6/src/WordGame.java )                  | object | `WordGame w = new WordGame(), q = new WordGame(); `
-Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
+Proj0620 | [ PlayerList.java ]( chapter6/src/PlayerList.java )                          | String | `String menu = "Select: \n a. Add a new player.\n b. Print all the names and scores.\n d. Enter name to remove ...`
 Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
 
 <!--- MacBook GMax has failed to Git push for two days, due to authentication. 
