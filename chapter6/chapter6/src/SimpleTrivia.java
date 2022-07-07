@@ -1,5 +1,5 @@
 
-/* 220616 Absolute Java  Chapter6 Programming Projects. Proj0612 */
+/* 220701 Absolute Java  Chapter6 Programming Projects. Proj0612 */
 import java.util.Scanner;
 
 /**
