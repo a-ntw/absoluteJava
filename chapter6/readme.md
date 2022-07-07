@@ -9,7 +9,7 @@ Disp0603 | [ DifferentEquals.java ]( chapter6/src/DifferentEquals.java )    | Ar
 Disp0605 | [ GolfScores.java ]( chapter6/src/GolfScores.java )              | partially filled array | `double[] score = new double[MAX_NUM]; int numUsed = 0; numUsed = fillArray(score); showDifference(score, numUsed);`
 Disp0605 | [ PartiallyFilledArray.java ]( chapter6/src/PartiallyFilledArray.java ) | Array constructor | `private int maxNumberElements; private double[] a; private int numberUsed;`
 Exec0609 | [ Exec0609.java ]( chapter6/src/Exec0609.java )                  | Array | ` double[] a = {1.2, 2.1, 3.3, 2.5, 4.5,7.9, 5.4, 8.7, 9.9, 1.0};`
-Disp0606 | [ GolfScoresVersion2.java ]( chapter6/src/GolfScoresVersion2.java )              | Array | `PartiallyFilledArray score = new PartiallyFilledArray(MAX_NUMBER_SCORES); fillArray(score); showDifference(score);`
+Disp0606 | [ GolfScoresVersion2.java ]( chapter6/src/GolfScoresVersion2.java ) | Array | `PartiallyFilledArray score = new PartiallyFilledArray(MAX_NUMBER_SCORES); fillArray(score); showDifference(score);`
 Exec0615 | [ GolfScoresStaticExercise.java ]( chapter6/src/GolfScoresStaticExercise.java ) | Static | `System.out.println("Enter golf scores:"); fillArray(); showDifference();`
 Disp0607 | [ UtilityClass.java ]( chapter6/src/UtilityClass.java )          | int... | `public static int max(int... arg) {`
 Disp0608 | [ Utility2.java ]( chapter6/src/Utility2.java )                  | String | `public static String censor(String sentence, String... unwanted) {`
@@ -33,13 +33,13 @@ Proj0613 | [ Trivia.java ]( chapter6/src/Trivia.java )                      | Ob
 Proj0614 | [ PinAuthenticate.java ]( chapter6/src/PinAuthenticate.java )    | String | `String ch = keyIn.substring(i, i + 1); if (!assignDigit.contains(ch)) {`
 Proj0615 | [ PizzaOrder.java ]( chapter6/src/PizzaOrder.java ) |  | ` `
 Proj0616 | [ BenfordsLaw.java ]( chapter6/src/BenfordsLaw.java )            | toString | `selected = Integer.toString(data).charAt(0); index = Integer.parseInt(Character.toString(selected));`
-Proj0617 | [ CSVRating.java ]( chapter6/src/CSVRating.java ) | Scanner | `public CSVRating(String filename) {`
+Proj0617 | [ CSVRating.java ]( chapter6/src/CSVRating.java )                | Scanner | `public CSVRating(String filename) {`
 Proj0618 | [ BoxOfProduce.java ]( chapter6/src/BoxOfProduce.java )          | while | `outerLoop: while (true) { ...  continue outerLoop;` ` public String toString() { String s = ... return s; }`
 Proj0619 | [ WordGame.java ]( chapter6/src/WordGame.java )                  | object | `WordGame w = new WordGame(), q = new WordGame(); `
-Proj0620 | [ PlayerList.java ]( chapter6/src/PlayerList.java )                          | String | `String menu = "Select: \n a. Add a new player.\n b. Print all the names and scores.\n d. Enter name to remove ...`
-Proj | [ main.java ]( chapter6/src/main.java ) |  | ` `
+Proj0620 | [ PlayerList.java ]( chapter6/src/PlayerList.java )              | String | `String menu = "Select: \n a. Add a new player.\n b. Print all the names and scores.\n d. Enter name to remove ...`
+Proj0621 | [ Player.java ]( chapter6/src/Player.java )                      | Array class | `Player[] arr = new Player[MAX_NUM]; add(arr, "Alice", 100); arr[0].setName("Mary"); arr[1] = new Player("John", 49);`
 
-<!--- MacBook GMax has failed to Git push for two days, due to authentication. 
+<!--- MacBook Mountain Lion has failed to Git push, due to authentication. 
 Checked on email axxxx43525@g for details. 
 For this, will email these java files to desktop for git push. --->
 
