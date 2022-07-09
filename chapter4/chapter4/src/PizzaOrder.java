@@ -110,7 +110,7 @@ public class PizzaOrder {
 
         PizzaOrder order = new PizzaOrder(); // Code to create an order 
 
-        order.setNumPizzas(2); // 2 pizzas in the order 
+        order.setNumPizzas(5); // 2 pizzas in the order 
         order.setPizza1(pizza1); // Set first pizza 
         order.setPizza2(pizza2); // Set second pizza
         double total = order.calcTotal(); // Should be 18+20 = 38
