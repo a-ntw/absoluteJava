@@ -9,6 +9,7 @@ Disp0702  | [ Employee.java ]( chapter7/src/Employee.java )                 |  |
 Disp0703  | [ HourlyEmployee.java ]( chapter7/src/HourlyEmployee.java )     |  | The Derived Class from base class Employee
 Disp0705  | [ SalariedEmployee.java ]( chapter7/src/SalariedEmployee.java ) |  | The Derived Class from base class Employee
 Disp0707 | [ EnhancedStringTokenizer.java ]( chapter7/src/EnhancedStringTokenizer.java ) | Object | `public Object nextElement() {  String token = super.nextToken(); ... return (Object) token;`
+Proj0701  | [ Person.java ]( chapter7/src/Person.java ) [ Student.java ]( chapter7/src/Student.java ) [ Teacher.java ]( chapter7/src/Teacher.java ) |  | `public class Teacher extends Person {`
 Proj  | [ main.java ]( chapter7/src/main.java ) |  | ` `
 Proj  | [ main.java ]( chapter7/src/main.java ) |  | ` `
 
