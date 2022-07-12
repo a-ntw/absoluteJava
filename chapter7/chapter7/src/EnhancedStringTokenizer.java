@@ -1,5 +1,6 @@
 
-/* 220709 Absolute Java  Chapter7 Programming Projects. Disp0707 */
+/* 220711 Absolute Java  Chapter7 Programming Projects. Exec0723 */
+ /* 220709 Absolute Java  Chapter7 Programming Projects. Disp0707 */
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -63,6 +64,21 @@ public class EnhancedStringTokenizer extends StringTokenizer {
             arrayToReturn[i] = a[i];
         }
         return arrayToReturn;
+    }
+
+    /*
+     * Exec0723. The method {@code nextElement()} returns the same string as the
+     * method {@code nextToken()}, but {@code nextElement()} returns it as
+     * something of type {@code Object}, as opposed to type {@code String}. Give
+     * a suitable definition of {@code nextElement} to add to the definition of
+     * {@code EnhancedStringTokenizer}. This definition will override the
+     * definition of nextElement in the class {@code StringTokenizer}.
+     */
+    public Object nextElement() {
+        String token = super.nextToken();
+        a[count] = token;
+        count++;
+        return (Object) token;
     }
 
     public static void main(String[] args) {

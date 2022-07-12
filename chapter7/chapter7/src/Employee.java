@@ -1,5 +1,6 @@
 
-/* 220710 Absolute Java  Chapter7 Programming Projects. Disp0702 */
+/* 220711 Absolute Java  Chapter7 Programming Projects. Disp0710 */
+ /* 220710 Absolute Java  Chapter7 Programming Projects. Disp0702 */
 /** The Base Class <b>Employee</b>
  * <p>
  * Class Invariant: All objects have a name string and hire date. A name string
@@ -68,12 +69,25 @@ public class Employee {
         }
     }
 
+    /**
+     * @return Ex `Josephine January 1, 2015`
+     */
     public String toString() {
         return (name + " " + hireDate.toString());
     }
 
-    public boolean equals(Employee otherEmployee) {
-        return (name.equals(otherEmployee.name)
-                && hireDate.equals(otherEmployee.hireDate));
+    /**
+     * Display 7.10 A Better equals Method for the Class Employee
+     */
+    public boolean equals(Object otherObject) {
+        if (otherObject == null) {
+            return false;
+        } else if (getClass() != otherObject.getClass()) {
+            return false;
+        } else {
+            Employee otherEmployee = (Employee) otherObject;
+            return (name.equals(otherEmployee.name)
+                    && hireDate.equals(otherEmployee.hireDate));
+        }
     }
 }

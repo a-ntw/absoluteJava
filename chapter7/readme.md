@@ -8,7 +8,7 @@ Disp0605 | [ GolfScores.java ]( chapter6/src/GolfScores.java )              | pa
 Disp0702  | [ Employee.java ]( chapter7/src/Employee.java )                 |  | The Base Class for HourlyEmployee & SalariedEmployee
 Disp0703  | [ HourlyEmployee.java ]( chapter7/src/HourlyEmployee.java )     |  | The Derived Class from base class Employee
 Disp0705  | [ SalariedEmployee.java ]( chapter7/src/SalariedEmployee.java ) |  | The Derived Class from base class Employee
-Disp0707 | [ EnhancedStringTokenizer.java ]( chapter7/src/EnhancedStringTokenizer.java ) |  | ` `
+Disp0707 | [ EnhancedStringTokenizer.java ]( chapter7/src/EnhancedStringTokenizer.java ) | Object | `public Object nextElement() {  String token = super.nextToken(); ... return (Object) token;`
 Proj  | [ main.java ]( chapter7/src/main.java ) |  | ` `
 Proj  | [ main.java ]( chapter7/src/main.java ) |  | ` `
 

@@ -1,5 +1,6 @@
 
-/* 220710 Absolute Java  Chapter7 Programming Projects. Disp0705 */
+/* 220711 Absolute Java  Chapter7 Programming Projects. Exec0720 */
+ /* 220710 Absolute Java  Chapter7 Programming Projects. Disp0705 */
 /** The Derived Class <b>SalariedEmployee</b>
  * Class Invariant: All objects have a name string, hire date, and nonnegative
  * salary. A name string of "No name" indicates no real name specified yet. A
@@ -40,7 +41,7 @@ public class SalariedEmployee extends Employee {
     }
 
     /**
-     * Returns the pay for the month.
+     * @return Returns the pay for the month.
      */
     public double getPay() {
         return salary / 12;
@@ -58,20 +59,37 @@ public class SalariedEmployee extends Employee {
         }
     }
 
-    @Override
+    /**
+     * @return Return ex `Josephine January 1, 2015\n $100000.0 per year`
+     */
     public String toString() {
         return (getName() + " " + getHireDate().toString()
                 + "\n$" + salary + " per year");
     }
 
-    public boolean equals(SalariedEmployee other) {
-        return (getName().equals(other.getName())
-                && getHireDate().equals(other.getHireDate())
-                && salary == other.salary);
+    /**
+     * Exec0720. Redefine the equals method of the class
+     * {@code SalariedEmployee} (Display 7.5) so that it has a parameter of type
+     * {@code Object} and follows the other guidelines we gave for an
+     * {@code equals} method. Assume the definition of the method {@code equals}
+     * for the class Employee has been changed to be as in Display 7.10.
+     * (Remember, you should use {@code getClass()}, not {@code instanceof}.)
+     */
+    public boolean equals(Object otherObject) {
+        if (otherObject == null) {
+            return false;
+        } else if (getClass() != otherObject.getClass()) {
+            return false;
+        } else {
+            SalariedEmployee otherSalariedEmployee
+                    = (SalariedEmployee) otherObject;
+            return (super.equals(otherSalariedEmployee)
+                    && (salary == otherSalariedEmployee.salary));
+        }
     }
-//}
-//public class main {
 
+//}
+    //public class main {
     public static void main(String[] args) {
 
         //  Display 7.6 An Object Belongs to Multiple Classes

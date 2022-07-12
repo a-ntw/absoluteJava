@@ -1,5 +1,6 @@
 
-/* 220710 Absolute Java  Chapter7 Programming Projects. Disp0703 */
+/* 220711 Absolute Java  Chapter7 Programming Projects. Disp0719 */
+ /* 220710 Absolute Java  Chapter7 Programming Projects. Disp0703 */
 /** The Derived Class <b>HourlyEmployee</b>
  * Class Invariant: All objects have a name string, hire date, nonnegative wage
  * rate, and nonnegative number of hours worked. A name string of "No name"
@@ -51,7 +52,7 @@ public class HourlyEmployee extends Employee {
     }
 
     /**
-     * Returns the pay for the month.
+     * @return Returns the pay for the month.
      */
     public double getPay() {
         return wageRate * hours;
@@ -81,6 +82,9 @@ public class HourlyEmployee extends Employee {
         }
     }
 
+    /**
+     * @return Ex `Sam February 1, 2015 \n$50.5 per hour for 40.0 hours`
+     */
     // The method toString is overridden so it is different in the derived class 
     // HourlyEmployee than it is in the base class Employee.
     public String toString() {
@@ -88,13 +92,34 @@ public class HourlyEmployee extends Employee {
                 + "\n$" + wageRate + " per hour for " + hours + " hours");
     }
 
+    /**
+     * Exec0719. Redefine the {@code equals} method of the class
+     * {@code HourlyEmployee} (Display 7.3) so that it has a parameter of type
+     * {@code Object} and follows the other guidelines we gave for an equals
+     * method. Assume the definition of the method {@code equals} for the class
+     * {@code Employee} has been changed to be as in Display 7.10. (Remember,
+     * you should use {@code getClass()}, not {@code instanceof}.)
+     */
+    public boolean equals(Object otherObject) {
+        if (otherObject == null) {
+            return false;
+        } else if (getClass() != otherObject.getClass()) {
+            return false;
+        } else {
+            HourlyEmployee otherHourlyEmployee = (HourlyEmployee) otherObject;
+            return (super.equals(otherHourlyEmployee)
+                    && (wageRate == otherHourlyEmployee.wageRate)
+                    && (hours == otherHourlyEmployee.hours));
+        }
+    }
+
+    /* was
     public boolean equals(HourlyEmployee other) {
         return (getName().equals(other.getName())
                 && getHireDate().equals(other.getHireDate())
                 && wageRate == other.wageRate
                 && hours == other.hours);
-    }
-
+    } */
     /**
      * Inheritance Demonstration
      */
@@ -122,4 +147,4 @@ joe's record is as follows:
 Josephine January 1, 2015
 $50.5 per hour for 160.0 hours
 BUILD SUCCESSFUL (total time: 0 seconds)
-*/
+ */
