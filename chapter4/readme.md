@@ -7,7 +7,7 @@ ref | fileName | type | shown
 Disp0413 | [ Date.java ]( chapter4/src/Date.java  )                     | get set | `public void setDate(int month, int day, int year) {if (dateOK(month, day ...`
 Disp0406 | [ Bill.java ]( chapter4/src/Bill.java )                      | methods | `yourBill.inputTimeWorked(); yourBill.updateFee(); yourBill.outputBill();`
 Disp0415 | [ Pet.java ]( chapter4/src/Pet.java )                        | constructor | `Pet usersPet = new Pet("Jane Dow");` // Constructors normally set all instance variables,
-Proj0401 | [ PrintCodeword.java ]( chapter4/src/PrintCodeword.java )    | toString | `public String toString() {return "" + letter + digit;}`
+Proj0401 | [ PrintCodeword.java ]( chapter4/src/PrintCodeword.java )    | char | `private char nextLetter() {int nextCharInt = letter + 1; ... return (char) nextCharInt;}`
 Proj0402 | [ CalAge.java ]( chapter4/src/CalAge.java )                  | object | `public double thisDateMinus(CalAge otherDate) {`
 Proj0403 | [ Vehicle.java ]( chapter4/src/Vehicle.java )                | boolean method | `private boolean okInit(int ...`
 Proj0404 | [ journal ]( chapter4/src/Journal.java )                     | object | `j = new Journal( ... ); j.setTitle(j.getSubmissionDetails(j.getTitle())); j.displayDetails();`
