@@ -1,5 +1,6 @@
 
-/* 220712 Absolute Java  Chapter7 Programming Projects. Proj0701 */
+/* 220717 Absolute Java  Chapter7 Programming Projects. Proj0706 */
+ /* 220712 Absolute Java  Chapter7 Programming Projects. Proj0701 */
 /**
  * Define a class named {@code Person} that contains two instance variables of
  * type {@code String} that stores the first name and last name of a person and
@@ -20,6 +21,7 @@
  *
  * @see Student.java
  * @see Teacher.java
+ * @see Vehicle.java
  */
 public class Person {
 
@@ -32,6 +34,12 @@ public class Person {
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    // Proj0706
+    public Person(Person theObject) {
+        this.firstName = theObject.firstName;
+        this.lastName = theObject.lastName;
     }
 
     public String getFirstName() {
@@ -54,6 +62,24 @@ public class Person {
         System.out.println(firstName + " " + lastName);
     }
 
+    // Proj0706
+    public String toString() {
+        return (firstName + " " + lastName);
+    }
+
+    // Proj0706
+    public boolean equals(Object other) {
+        if (other == null) {
+            return false;
+        } else if (getClass() != other.getClass()) {
+            return false;
+        } else {
+            Person otherObj = (Person) other;
+            return firstName == otherObj.firstName
+                    && lastName == otherObj.lastName;
+        }
+    }
+
 //public class main {
     public static void main(String[] args) {
         Person anne = new Person("Anne", "");
@@ -67,6 +93,15 @@ public class Person {
         tan.displayDetails();
         Teacher ong = new Teacher("June", "Ong", "Programming", 2000);
         ong.displayDetails();
+
+        System.out.println("");
+        anne.setLastName("Tai");
+        Person annie = new Person(anne);
+        //annie.setFirstName("Annie");
+        if (anne.equals(annie)) {
+            System.out.println("anne is equal to annie");
+        }
+        System.out.println(anne + " is the same as " + annie);
     }
 }
 
@@ -81,5 +116,8 @@ Mary Tan
 subject: Internet, salary: 3000.0
 June Ong
 subject: Programming, salary: 2000.0
+
+anne is equal to annie
+Anne Tai is the same as Anne Tai
 BUILD SUCCESSFUL (total time: 0 seconds)
  */

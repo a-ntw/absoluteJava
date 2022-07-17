@@ -13,6 +13,7 @@ Proj0702 | [ Message.java ]( chapter7/src/Message.java ) [ SMS.java ]( chapter7/
 Proj0703 | [ Alien.java ]( chapter7/src/Alien.java ) [ AlienPack.java ]( chapter7/src/AlienPack.java ) [ AlienSnake.java ]( chapter7/src/AlienSnake.java ) [ AlienOgre.java ]( chapter7/src/AlienOgre.java ) [ AlienMarshmallow.java ]( chapter7/src/AlienMarshmallow.java ) | Object | `for (Alien n : arr.getAliens()) { System.out.println(n.getClass());  System.out.println(", Damage: " + n.getDamage()); }`
 Proj0704 | [ Administrator.java ]( chapter7/src/Administrator.java )        |  | `public class Administrator extends SalariedEmployee {`
 Proj0705 | [ Doctor.java ]( chapter7/src/Doctor.java )                      |  | ` `
+Proj0706 | [ Vehicle.java ]( chapter7/src/Vehicle.java ) [ Truck.java ]( chapter7/src/Truck.java ) |  | ` `
 Proj  | [ main.java ]( chapter7/src/main.java ) |  | ` `
 Proj  | [ main.java ]( chapter7/src/main.java )                             |  | `                                                                                                                   `
 

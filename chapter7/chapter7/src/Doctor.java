@@ -58,8 +58,8 @@ public class Doctor extends SalariedEmployee {
 
     @Override
     public String toString() {
-        return super.toString() + "\nSpecialty: " + getSpecialty()
-                + "; Office visit fee: $" + getVisitFee();
+        return super.toString() + "\nSpecialty: " + specialty
+                + "; Office visit fee: $" + visitFee;
     }
 
     public static void main(String[] args) {
