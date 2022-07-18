@@ -22,6 +22,7 @@
  * @see Student.java
  * @see Teacher.java
  * @see Vehicle.java
+ * @see Patient.java
  */
 public class Person {
 

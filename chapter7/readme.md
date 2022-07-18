@@ -1,6 +1,6 @@
 chapter7
 ---
-[top]: topOfThePage
+<!--- [top]: topOfThePage --->
 
 ref | fileName | type | shown
 --- | --- | --- | ---:
@@ -14,12 +14,11 @@ Proj0703 | [ Alien.java ]( chapter7/src/Alien.java ) [ AlienPack.java ]( chapter
 Proj0704 | [ Administrator.java ]( chapter7/src/Administrator.java )        |  | `public class Administrator extends SalariedEmployee {`
 Proj0705 | [ Doctor.java ]( chapter7/src/Doctor.java )                      |  | ` `
 Proj0706 | [ Vehicle.java ]( chapter7/src/Vehicle.java ) [ Truck.java ]( chapter7/src/Truck.java ) |  | ` `
+Proj0707 | [ Patient.java ]( chapter7/src/Patient.java ) [ Billing.java ]( chapter7/src/Billing.java ) | method | `public static void methodsTesting() {`
 Proj  | [ main.java ]( chapter7/src/main.java ) |  | ` `
 Proj  | [ main.java ]( chapter7/src/main.java )                             |  | `                                                                                                                   `
 
-<!--- MacBook Mountain Lion has failed to Git push, due to authentication. 
-Checked on email axxxx43525@g for details. 
-For this, will email these java files to desktop for git push. --->
+<!--- Comments here --->
 
 [:top: Top](#top)
 
