@@ -1,6 +1,6 @@
 chapter7
 ---
-<!--- [top]: topOfThePage --->
+[top]: top
 
 ref | fileName | type | shown
 --- | --- | --- | ---:
@@ -15,7 +15,7 @@ Proj0704 | [ Administrator.java ]( chapter7/src/Administrator.java )        |  |
 Proj0705 | [ Doctor.java ]( chapter7/src/Doctor.java )                      |  | ` `
 Proj0706 | [ Vehicle.java ]( chapter7/src/Vehicle.java ) [ Truck.java ]( chapter7/src/Truck.java ) |  | ` `
 Proj0707 | [ Patient.java ]( chapter7/src/Patient.java ) [ Billing.java ]( chapter7/src/Billing.java ) | method | `public static void methodsTesting() {`
-Proj  | [ main.java ]( chapter7/src/main.java ) |  | ` `
+Proj0708 | [ Pet.java ]( chapter7/src/Pet.java ) [ Dog.java ]( chapter7/src/Dog.java ) [ Cat.java ]( chapter7/src/Cat.java ) | Class | `public static void displayDosage(Pet pet) {if (pet.petTypeOK(pet.getClass().getName())) {`
 Proj  | [ main.java ]( chapter7/src/main.java )                             |  | `                                                                                                                   `
 
 <!--- Comments here --->
