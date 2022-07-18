@@ -8,6 +8,7 @@
 public class Dog extends Pet {
 
     public Dog() {
+        this("No name yet.", 0, 0);
     }
 
     public Dog(String name, int age, double weight) {

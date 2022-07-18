@@ -622,6 +622,12 @@ usually called a **superclass**.
 The class `HourlyEmployee` (or any other derived class) is said to **inherit** 
 the instance variables and methods of the base class that it extends.
 
+pg 465 Display 7.5 The Derived Class SalariedEmployee
+
+`public SalariedEmployee(SalariedEmployee originalObject){`
+`super(originalObject);` An object of the class SalariedEmployee is also an 
+object of the class Employee.
+
 pg 467
 
 the only members not inherited are private methods.
@@ -662,7 +668,7 @@ In this case, the following details would be allowed in a derived class:
 ```
 pg 472
 
-Changing the Access Permission of an Overridden Method
+**Changing the Access Permission of an Overridden Method**
 
 You can change the access permission of an overridden method from `private` in 
 the base class to `public` in the derived class (or in any other way that makes 
@@ -693,6 +699,15 @@ action taken by the constructor.
 ```
 if you do not include a call to a base class constructor (using super), then the 
 no-argument constructor of the base class is called automatically.
+
+Can use the keyword `this` as a method name to invoke a constructor in the same class.
+
+pg 480
+
+Many programmers and authors use the term *subclass* for a derived class and 
+use *superclass* for its base class (or any of its ancestor classes).
+
+Display 7.7 [Enhanced StringTokenizer](chapter7/chapter7/src/EnhancedStringTokenizer.java)
 
 pg 483 **Encapsulation and Inheritance**
 
