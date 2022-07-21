@@ -41,7 +41,8 @@ import java.util.StringTokenizer;
 public class BoxOfProduce {
 
     private static final String FILENAME
-            = "src/BoxOfProduce.txt";
+            //= "src/BoxOfProduce.txt"; // can run on Netbean
+            = "../../src/BoxOfProduce.txt"; // can run on commandline
     private static final int FILEROWS = 5;
     private static final int MAX_SIZE = 10;
     private Produce[] prods = new Produce[MAX_SIZE];
