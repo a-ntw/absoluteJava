@@ -1,11 +1,11 @@
 run:
 Absolute Java  Chapter7 Programming Projects. 
 ### Sample dialogue
-``` java 
+``` console 
 ``` 
 
 Disp0703	HourlyEmployee.java
-``` java 
+``` console 
 joe's longer name is Joe Worker
 Changing joe's name to Josephine.
 joe's record is as follows:
@@ -14,7 +14,7 @@ $50.5 per hour for 160.0 hours
 ``` 
 
 Disp0705	SalariedEmployee.java
-``` java 
+``` console 
 joe's longer name is Josephine
 showEmployee(joe) invoked:
 Josephine
@@ -25,7 +25,7 @@ February 1, 2015
 ``` 
 
 Disp0707	EnhancedStringTokenizer.java
-``` java 
+``` console 
 Enter a sentence:
 I    love     you,    madly.
 Your sentence with extra blanks deleted:
@@ -38,7 +38,7 @@ madly.
 ``` 
 
 Proj0701	Person.java Student.java Teacher.java
-``` java 
+``` console 
 Anne 
 John Ang
 id: 19, course: Information, teacher: Tan
@@ -54,14 +54,14 @@ Anne Tai is the same as Anne Tai
 ``` 
 
 Proj0702	Message.java SMS.java Email.java
-``` java 
+``` console 
 SMS contain 123: true
 Email contain hello: true
 Java: Uijt!jt!Kbwb
 ``` 
 
 Proj0703	Alien.java AlienPack.java AlienSnake.java AlienOgre.java AlienMarshmallow.java
-``` java 
+``` console 
 class AlienSnake
 Alien name: Sss, Heath: 50, Damage: 10
 class AlienOgre
@@ -72,7 +72,7 @@ Damage: 17
 ``` 
 
 Proj0704	Administrator.java
-``` java 
+``` console 
 joe is equal to josephine!
 Josephine January 1, 2015
 $10000.0 per year
@@ -99,7 +99,7 @@ Choice: 5
 ``` 
 
 Proj0705	Doctor.java
-``` java 
+``` console 
 sam is equal to samuel
 Samuel February 1, 2015
 $5000.0 per year
@@ -110,7 +110,7 @@ February 1, 2015
 ``` 
 
 Proj0706	Vehicle.java Truck.java
-``` java 
+``` console 
 Some Where Co., 6 cyl.
 Capacity: 1000.0, Tow capacity3000
 Anne Tai is equal Anne
@@ -122,7 +122,7 @@ Truck capacity: 1000.0 kg; tow capacity: 3000 kg
 ``` 
 
 Proj0707	Patient.java Billing.java
-``` java 
+``` console 
 Patient methods testing: ok . ok .. ok ... 
 Billing methods testing: ok . ok .. ok ...
 Patient Mary attended by Dr. Samuel      $250.00 
@@ -131,7 +131,7 @@ Total income from the records            $580.00
 ``` 
 
 Proj0708	Pet.java Dog.java Cat.java
-``` java 
+``` console 
 My records on your pet are incomplete.
 Here is what they currently say:
 Name: Jane Dow Age: 0 years. Weight: 0.0 pounds.
@@ -153,7 +153,7 @@ Dosage on Carprofen for Meow will be 0.03 ml.
 ``` 
 
 Proj0709	BoxOfProduce.java Produce.java Fruit.java Vegetable.java
-``` java 
+``` console 
 Methods testing:  . ok  .. ok 
 Ramdonly selected
 There are 2 nos of fruits, & 1 nos of vegetable.
@@ -180,10 +180,10 @@ main.java
 public class main {
 
     public static void main(String[] args) {
-        String s1 = "``` %n%n", s2 = "%n``` java %n";
+        String s1 = "``` %n%n", s2 = "%n``` console %n";
 
         System.out.printf("Absolute Java  Chapter7 Programming Projects. %n"
-                + "### Sample dialogue%n``` java %n");
+                + "### Sample dialogue%n``` console %n");
 
         System.out.printf(s1 + "Disp0703	HourlyEmployee.java" + s2);
         HourlyEmployee.main(args);
