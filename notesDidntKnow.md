@@ -6,6 +6,7 @@ mynotes on didn't know about these:
 - [chapter 4](#chapter-4)
 - [chapter 5](#chapter-5)
 - [chapter 6](#chapter-6)
+- [chapter 7](#chapter-7)
 
 [top]: topOfThePage
 
@@ -600,6 +601,186 @@ Multidimensional Array Basic
 pg 435
 
 Ragged Arrays *
+
+
+
+[:top: Top](#top)
+### chapter 7 ###
+
+pg 460
+
+Inheritance is the process by which a new class — known as a *derived class* — 
+is created from another class, called the *base class*. A derived class 
+automatically has all the instance variables and all the methods that the base 
+class has, and can have additional methods and/or additional instance variables.
+
+A derived class is also called a **subclass**, in which case the base class is 
+usually called a **superclass**.
+``` java
+        public class HourlyEmployee extends Employee
+```
+The class `HourlyEmployee` (or any other derived class) is said to **inherit** 
+the instance variables and methods of the base class that it extends.
+
+pg 465 Display 7.5 The Derived Class SalariedEmployee
+
+`public SalariedEmployee(SalariedEmployee originalObject){`
+`super(originalObject);` An object of the class SalariedEmployee is also an 
+object of the class Employee.
+
+pg 467
+
+the only members not inherited are private methods.
+
+A derived class automatically has all the instance variables, all the static 
+variables, and all the public methods of the base class. These members from the 
+base class are said to be **inherited**. ... The one exception is, you can give 
+a definition for an inherited method in the definition of the derived class; 
+this will redefine the meaning of the method for the derived class.
+
+pg 470
+
+A base class is often called the **parent class**. A derived class is then called 
+a **child class**.
+
+the method may be redefined in the derived class. This is called **overriding** 
+the method definition.
+
+If you add the modifier `final` to the definition of a method, it indicates that 
+the method may not be redefined in a derived class.
+
+As a general rule, when overriding a method definition, you may *not* change the 
+type returned by the method, ... The one exception to this rule is if the 
+returned type is a class type, ... This sort of changed return type is known as 
+a **covariant return type** ...
+``` java
+    public class BaseClass {
+          ...
+        public Employee getSomeone(int someKey)
+          ...
+```
+In this case, the following details would be allowed in a derived class:
+``` java
+    public class DerivedClass extends BaseClass {
+          ...
+        public HourlyEmployee getSomeone(int someKey)
+        ...
+```
+pg 472
+
+**Changing the Access Permission of an Overridden Method**
+
+You can change the access permission of an overridden method from `private` in 
+the base class to `public` in the derived class (or in any other way that makes 
+access permissions more permissive).
+``` java
+public class BaseClass {    private void doSomething()
+```
+can use the following heading when overriding the method definition in a 
+derived class:
+``` java
+public class DerivedClass { public void doSomething()
+```
+but you cannot change `public` to `private`.
+
+
+pg 476
+
+Within the definition of a constructor for a class, you can use `super` as a name 
+for a constructor of the base class. Any invocation of `super` must be the first 
+action taken by the constructor.
+``` java
+    public HourlyEmployee() {
+        super(); // If this line is omitted, Java will still invoke the 
+        //          no-argument constructor for the base class.
+        wageRate = 0;
+        hours = 0;
+    }
+```
+if you do not include a call to a base class constructor (using super), then the 
+no-argument constructor of the base class is called automatically.
+
+Can use the keyword `this` as a method name to invoke a constructor in the same class.
+
+pg 480
+
+Many programmers and authors use the term *subclass* for a derived class and 
+use *superclass* for its base class (or any of its ancestor classes).
+
+Display 7.7 [Enhanced StringTokenizer](chapter7/chapter7/src/EnhancedStringTokenizer.java)
+
+pg 483 **Encapsulation and Inheritance**
+
+the information-hiding facilities of Java, primarily the `private` modifier, 
+interact with inheritance. ...
+An instance variable (or method) that is private in a base class is not 
+accessible *by name* in the definition of a method in *any other class, not even 
+in a method definition of a derived class*.
+
+pg 487
+
+The two classifications of instance variables and methods are *protected access*, 
+which always gives access, and *package access*, which gives access if the derived 
+class is in the same package as the base class. ... Many programming authorities 
+discourage the use of the `protected` modifier. 
+
+If you do not place any of the modifiers `public`, `private`, or `protected` before an 
+instance variable or method definition, then the instance variable or method is 
+said to have **package access**. Package access is also known as **default access** and 
+as **friendly access**.
+
+pg 489 Access Modifiers
+public class A | public class B | public class C extends A | public class D extends A | public class E
+--- | --- | --- | --- | ---
+package same      | package same    | package **same** | default | default
+**public int** v1;    | can access v1.  | can access v1. | can access v1. | can access v1.
+**protected int** v2; | can access v2.  | can access v2.  | **can** access v2. | cannot access v2.
+**int** v3.           | can acess v3.   | can acess v3.   | **cannot** acess v3. | cannot access v3.
+**private int** v4;   | cannot access v4. | cannot access v4. | cannot access v4. | cannot access v4.
+
+... all the classes in your current directory (that do not belong to some other 
+package) belong to an unnamed package called the *default package*. 
+
+pg 493
+
+Tip: "is a" versus "has a"
+
+an `HourlyEmployee` *is an* `Employee` and *has a* `Date`.
+
+The expression `super.toString()` is an invocation of the method `toString()` using 
+the definition of `toString()` given in the base class `Employee`.
+
+
+pg 496
+
+In Java, every class is a descendent of the class `Object`. So, every object of 
+every class is of type `Object`, as well as being of the type of its class.
+
+The class `Object` is in the package `java.lang`, which is always imported automatically.
+
+The Right Way to Define `equals`
+``` java
+    public boolean equals(Object otherObject) {
+        Employee otherEmployee = (Employee) otherObject;
+        return (name.equals(otherEmployee.name)
+                && hireDate.equals(otherEmployee.hireDate));
+    }
+```
+Every object inherits the method `getClass()` from the class `Object`. ... For 
+any object `o`, 
+``` java
+        o.getClass()
+```
+returns a representation of the class used to create `o`. 
+
+The `instanceof` operator checks to see if an object is of the type given as its 
+second argument. The syntax is
+``` java
+        Object instanceof Class_Name
+```
+which returns `true` if Object is of type `Class_Name`; otherwise it returns 
+`false`.
+
 
 
 [:top: Top](#top)
