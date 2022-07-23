@@ -54,8 +54,8 @@ package MyMath;
  * (If you want to do both Part Two and Alternate Part Two, they must be two
  * classes. You cannot include the methods from both Part Two and Alternate Part
  * Two in a single class. Do you know why?)
- * <br>Proj0511 220613 Absolute Java Chapter5 Programming Projects
- * <br>Proj0506 220605 Absolute Java Chapter5 Programming Projects
+ * <br>Ref: Proj0511 220613 Absolute Java Chapter5 Programming Projects
+ * <br>Ref: Proj0506 220605 Absolute Java Chapter5 Programming Projects
  *
  * @see Proj0511
  * @see main(String[] args) Sample dialogue

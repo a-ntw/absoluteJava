@@ -19,7 +19,7 @@ Proj0507 | [ NationalCall.java ]( chapter5/src/NationalCall.java ) [ Internation
 Proj0508 | [ PizzaOrder.java ]( chapter5/src/PizzaOrder.java )      | get set | `public Pizza getPizza2() { if (pizza2 != null) { return pizza2;} return null; }`
 Proj0509 | [ Person.java ]( chapter5/src/Person.java )              | debug | in Date.java `February` was `Febuary`
 Proj0510 | [ BoxOfProduce.java ]( chapter5/src/BoxOfProduce.java )            | toString | `public String toString() { ... if (flyerInclude()) { box = box + "and salsa ... return box;`
-Proj0511 | [ Proj0511 ]( chapter5/src/Proj0511/main.java )          | package | `package Proj0511; import Finance.Money; import MyMath.Rational;`
+Proj0511 | [ Proj0511 ]( chapter5/src/Proj0511/main.java )          | package | `package Proj0511; import Finance.Money; import MyMath.Rational;` `javadoc -d Proj0511Doc -sourcepath ~/absoluteJ/chapter5/chapter5/src -subpackages Proj0511:Finance:MyMath`
 
 [:top: Top](#top)
 
