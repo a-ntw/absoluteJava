@@ -1,11 +1,19 @@
-/* 220723 Absolute Java  Chapter8 Programming Projects. Proj0800 */
+
 /**
- * main.
+ * Proj0800 main.
  *
- * @author antw
+ * Ref: 220723 Absolute Java  Chapter8 Programming Projects. 
+ *
+ * @see main(String[] args) Sample dialogue
  */
 public class main {
 
+    /**
+     * <b>Sample dialogue</b>
+     * <pre>
+     * Absolute Java  Chapter8 Programming Projects.
+     * @param args </pre>
+     */
     public static void main(String[] args) {
         System.out.println("Absolute Java  Chapter8 Programming Projects.");
 
