@@ -1,15 +1,13 @@
-/* 220613  Absolute Java  Chapter5 Programming Projects  11. */
- /* 220605 Absolute Java Chapter5 Programming Projects 6.*/
 package MyMath;
 
 /**
- * Part One: Define a class for rational numbers. A rational number is a number
- * that can be represented as the quotient of two integers. For example, 1/2,
- * 3/4, 64/2, and so forth are all rational numbers. (By 1/2 and so forth, we
- * mean the everyday meaning of the fraction, not the integer division this
- * expression would produce in a Java program.) Represent rational numbers as
- * two values of type {@code int}, one for the numerator and one for the
- * denominator. Your class should have two instance variables of type
+ * Proj0506; Part One: Define a class for rational numbers. A rational number is
+ * a number that can be represented as the quotient of two integers. For
+ * example, 1/2, 3/4, 64/2, and so forth are all rational numbers. (By 1/2 and
+ * so forth, we mean the everyday meaning of the fraction, not the integer
+ * division this expression would produce in a Java program.) Represent rational
+ * numbers as two values of type {@code int}, one for the numerator and one for
+ * the denominator. Your class should have two instance variables of type
  * {@code int}. Call the class {@code Rational}. Include a constructor with two
  * arguments that can be used to set the instance variables of an object to any
  * values. Also include a constructor that has only a single parameter of type
@@ -56,8 +54,11 @@ package MyMath;
  * (If you want to do both Part Two and Alternate Part Two, they must be two
  * classes. You cannot include the methods from both Part Two and Alternate Part
  * Two in a single class. Do you know why?)
+ * <br>Proj0511 220613 Absolute Java Chapter5 Programming Projects
+ * <br>Proj0506 220605 Absolute Java Chapter5 Programming Projects
  *
- * <p>//@see Proj0511/main.java
+ * @see Proj0511
+ * @see main(String[] args) Sample dialogue
  */
 public class Rational {
 
@@ -164,7 +165,7 @@ public class Rational {
     /**
      * static method {@code add} for addition of 2 Rational objects.
      *
-     * @param r1 object 
+     * @param r1 object
      * @param r2 object
      * @return Return new {@code Rational} object.
      */
@@ -349,9 +350,21 @@ public class Rational {
     }
 
     /**
-     * main.
-     *
-     * @param args args
+     * <b>Sample dialogue</b>
+     * <pre>
+     * run:
+     * n1: -64/2  n2: 1/2 n4: -1/2  n5: 3/4
+     * add(n1,n2)  : -63/2
+     * n1.add(n2)  : -63/2
+     * minus(n1,n2): -65/2
+     * n1.minus(n2): -65/2
+     * multiply(n4, n5): -3/8
+     * n4.multiply(n5) : -3/8
+     * divide(n4, n5   : -2/3
+     * n4.divide(n5)   : -2/3
+     * n4.divideThisBy(n5): -2/3
+     * -2/3 equal -4/6 : true
+     * BUILD SUCCESSFUL (total time: 0 seconds) </pre>
      */
     public static void main(String[] args) {
         Rational n1 = new Rational(64, -2), n2 = new Rational(2, 4), n3,
@@ -380,19 +393,3 @@ public class Rational {
 
     }
 }
-
-/* Sample dialogue
-run:
-n1: -64/2  n2: 1/2 n4: -1/2  n5: 3/4
-add(n1,n2)  : -63/2
-n1.add(n2)  : -63/2
-minus(n1,n2): -65/2
-n1.minus(n2): -65/2
-multiply(n4, n5): -3/8
-n4.multiply(n5) : -3/8
-divide(n4, n5   : -2/3
-n4.divide(n5)   : -2/3
-n4.divideThisBy(n5): -2/3
--2/3 equal -4/6 : true
-BUILD SUCCESSFUL (total time: 0 seconds)
- */
