@@ -1,12 +1,10 @@
-/* 220613  Absolute Java  Chapter5 Programming Projects  11. */
- /* 220603  Absolute Java  Chapter5 Programming Projects  5. */
 package Finance;
 
 /**
- * Part One: Define a class named {@code Money} whose objects represent amounts
- * of US money. The class should have two instance variables of type
- * {@code int} for the dollars and cents in the amount of money. Include a
- * constructor with two parameters of type {@code int} for the dollars and
+ * Proj0505; Part One: Define a class named {@code Money} whose objects
+ * represent amounts of US money. The class should have two instance variables
+ * of type {@code int} for the dollars and cents in the amount of money. Include
+ * a constructor with two parameters of type {@code int} for the dollars and
  * cents, one with one constructor of type {@code int} for an amount of dollars
  * with zero cents and a no-argument constructor. Include the methods
  * {@code add} and {@code minus} for addition and subtraction of amounts of
@@ -39,8 +37,11 @@ package Finance;
  * (If you want to do both Part Two and Alternate Part Two, they must be two
  * classes. You cannot include the methods from both Part Two and Alternate Part
  * Two in a single class. Do you know why?)
+ * <br>Ref: Proj0511 220613 Absolute Java Chapter5 Programming Projects
+ * <br>Ref: Proj0505 220603 Absolute Java Chapter5 Programming Projects
  *
- * <p>//@see ../Proj0511/main.java
+ * @see Proj0511
+ * @see main(String[] args) Sample dialogue
  */
 public class Money {
 
@@ -49,6 +50,7 @@ public class Money {
 
     /**
      * Constructor for the dollars and cents.
+     *
      * @param dollars dollars
      * @param cents cents
      */
@@ -59,6 +61,7 @@ public class Money {
 
     /**
      * Constructor for the dollars and 0 cents.
+     *
      * @param dollars dollars
      */
     public Money(int dollars) {
@@ -73,7 +76,8 @@ public class Money {
     }
 
     /**
-     * static method {@code add} for addition of amounts of  money.
+     * static method {@code add} for addition of amounts of money.
+     *
      * @param a object a
      * @param b object b
      * @return Return new object
@@ -91,7 +95,8 @@ public class Money {
     }
 
     /**
-     * calling object method {@code add} for addition of amounts of  money.
+     * calling object method {@code add} for addition of amounts of money.
+     *
      * @param b object b
      * @return return new object
      */
@@ -108,7 +113,8 @@ public class Money {
     }
 
     /**
-     * Static method {@code minus} for subtraction of amounts of  money.
+     * Static method {@code minus} for subtraction of amounts of money.
+     *
      * @param a object a
      * @param b object b
      * @return Return new object
@@ -125,10 +131,11 @@ public class Money {
     }
 
     /**
-     * calling object method {@code minus} for subtraction of amounts of  money.
+     * calling object method {@code minus} for subtraction of amounts of money.
+     *
      * @param b object b
      * @return Return new object
-     */    
+     */
     // calling obj method
     public Money minus(Money b) {
         if ((this.dollars + (float) this.cents / 100) < (b.dollars + (float) b.cents / 100)) {
@@ -147,7 +154,8 @@ public class Money {
     }
 
     /**
-     * Void method {@code minus} for subtraction of amounts of  money.
+     * Void method {@code minus} for subtraction of amounts of money.
+     *
      * @param b object b
      */
     public void minusThisBy(Money b) {
@@ -157,6 +165,7 @@ public class Money {
 
     /**
      * Test if current is equal to the others.
+     *
      * @param others others object
      * @return Return true if both are the same.
      */
@@ -167,6 +176,7 @@ public class Money {
 
     /**
      * Print console of String of object.
+     *
      * @return String with {} dollars and {} cents
      */
     @Override
@@ -176,6 +186,7 @@ public class Money {
 
     /**
      * Set or change the value of {@code dollars}.
+     *
      * @param dollars dollars
      */
     public void setDollars(int dollars) {
@@ -184,7 +195,8 @@ public class Money {
 
     /**
      * Set or change the value of {@code cents}.
-     * @param cents  cents
+     *
+     * @param cents cents
      */
     public void setCents(int cents) {
         this.cents = cents;
@@ -192,6 +204,7 @@ public class Money {
 
     /**
      * Call the value of {@code dollars}.
+     *
      * @return Return the value
      */
     public int getDollars() {
@@ -200,6 +213,7 @@ public class Money {
 
     /**
      * Call the value of {@code cents}.
+     *
      * @return Return the value of {@code cents}.
      */
     public int getCents() {
@@ -207,8 +221,16 @@ public class Money {
     }
 
     /**
-     * main.
-     * @param args  args
+     * <b>Sample dislogue</b><pre>
+     * run:
+     * m1: 12 dollars & 85 cents  m2: 12 dollars & 35 cents
+     * m1 + m2: 25 dollars & 20 cents
+     * m1 - m2: 0 dollars & 50 cents
+     * m1 + m2: 25 dollars & 20 cents
+     * m1 - m2: 0 dollars & 50 cents
+     * m1 is $12.85: true
+     * m1: 0 dollars & 50 cents  m2: 12 dollars & 35 cents
+     * BUILD SUCCESSFUL (total time: 0 seconds) </pre>
      */
     public static void main(String[] args) {
         Money m1 = new Money(12, 85), m2 = new Money(12);
@@ -225,15 +247,3 @@ public class Money {
         System.out.println("m1: " + m1 + "  m2: " + m2);
     }
 }
-
-/* Sample dislogue
-run:
-m1: 12 dollars & 85 cents  m2: 12 dollars & 35 cents
-m1 + m2: 25 dollars & 20 cents
-m1 - m2: 0 dollars & 50 cents
-m1 + m2: 25 dollars & 20 cents
-m1 - m2: 0 dollars & 50 cents
-m1 is $12.85: true
-m1: 0 dollars & 50 cents  m2: 12 dollars & 35 cents
-BUILD SUCCESSFUL (total time: 0 seconds)
- */
